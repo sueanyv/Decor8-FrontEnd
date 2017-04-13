@@ -1,22 +1,9 @@
-language: node.js
+language: node_js
 node_js:
- - 'stable'
-services:
- - mongodb
-addons:
- apt:
-   sources:
-     - ubuntu-toolchain-r-test
-   packages:
-     - gcc-4.8
-     - g++-4.8
-env:
- - CXX=g++-4.8
+  - 'stable'
 sudo: required
 before_script: npm i
 script:
- - npm run test
- - npm test
 
 notifications:
  email: false
