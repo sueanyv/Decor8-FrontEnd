@@ -27,14 +27,14 @@ function routerConfig($stateProvider, $urlRouterProvider){
     {
       name: 'post',
       url: '/post/:id',
-      template: require('../view/landing/post.html'),
+      template: require('../view/post/post.html'),
       controller: 'PostController',
       controllerAs: 'postCtrl'
     },
     {
       name: 'profile',
       url: '/profile/:id',
-      template: require('../view/landing/post.html'),
+      template: require('../view/profile/profile.html'),
       controller: 'ProfileController',
       controllerAs: 'profileCtrl',
     }
