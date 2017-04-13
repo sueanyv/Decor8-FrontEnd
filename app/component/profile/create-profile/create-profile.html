@@ -1,0 +1,23 @@
+<section class="upload-profile">
+  <form
+    ng-submit="uploadProfileCtrl.uploadProfile()"
+    novalidate>
+
+    <h3>Create New Profile</h3>
+
+    <fieldset>
+      <input class="input-std" type="text" ng-model="uploadProfileCtrl.profile.name" placeholder="name">
+      <input class="input-std" type="text" ng-model="uploadProfileCtrl.profile.bio" placeholder="About You">
+    </fieldset>
+
+    <div>
+      <p class="grab-img"
+        ngf-select
+        ng-model="uploadProfileCtrl.pic.file">
+        select a profile pic to upload
+      </p>
+
+      <button class="btn-std">upload</button>
+    </div>
+  </form>
+</section>
