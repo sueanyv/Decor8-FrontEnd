@@ -1,18 +1,18 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'Upload', 'authService', picService];
+module.exports = ['$q', '$log', '$http', 'Upload', 'authService', profileService];
 
-function picService($q, $log, $http, Upload, authService) {
-  $log.debug('picService');
+function profileService($q, $log, $http, Upload, authService) {
+  $log.debug('profileService');
 
   let service = {};
 
-  service.uploadGalleryPic = function(galleryData, picData) {
-    $log.debug('service.uploadGalleryPic');
+  service.uploadProfilePic = function(picData) {
+    $log.debug('service.uploadProfilePic');
 
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic`;
+      let url = `${__API_URL__}/api/profile`;
       let headers = {
         Authorization: `Bearer ${token}`,
         Accept: 'application/json'
@@ -24,50 +24,15 @@ function picService($q, $log, $http, Upload, authService) {
         method: 'POST',
         data: {
           name: picData.name,
-          desc: picData.desc,
+          bio: picData.bio,
           file: picData.file
         }
       });
     })
-    .then( res => {
-      galleryData.pics.unshift(res.data);
-      return res.data;
-    })
     .catch( err => {
       $log.error(err.message);
       return $q.reject(err);
     });
   };
-
-
-  service.deletePic = function(galleryData, picID) {
-    $log.debug('picService.deletePic');
-
-    return authService.getToken()
-    .then( token => {
-      let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic/${picID}`;
-      let config = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      };
-
-      return $http.delete(url, config);
-    })
-    .then( () => {
-      for (let i=0; i < galleryData.pics.length; i++) {
-        if (galleryData.pics[i]._id === picID) {
-          galleryData.pics.splice(i, 1);
-          break;
-        }
-      }
-    })
-    .catch( err => {
-      $log.error(err.message);
-      return $q.reject(err);
-    });
-
-  };
-
   return service;
 }

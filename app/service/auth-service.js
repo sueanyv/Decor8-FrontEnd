@@ -8,7 +8,7 @@ function authService($q, $log, $http, $window){
   let token = null;
 
   function setToken(_token){
-    $log.debug('authService setToken');
+    $log.debug('authService.setToken');
     if(!_token){
       return $q.reject(new Error('no token'));
     }

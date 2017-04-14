@@ -4,16 +4,16 @@ require('./_create-profile.scss');
 
 module.exports = {
   template: require('./create-profile.html'),
-  controller: ['$log', 'picService', UploadProfileController],
-  controllerAs: 'uploadProfileCtrl',
+  controller: ['$log', 'picService', CreateProfileController],
+  controllerAs: 'createProfileCtrl',
 };
 
-function UploadProfileController($log, profileService){
-  $log.debug('UploadProfileController');
+function CreateProfileController($log, profileService){
+  $log.debug('CreateProfileController');
 
   this.profile = {};
 
-  this.UploadProfileController = function() {
+  this.CreateProfileController = function() {
     profileService.uploadProfilePic(this.pic)
     .then( () => {
       this.pic.name = null;
