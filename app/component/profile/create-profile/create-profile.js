@@ -8,16 +8,16 @@ module.exports = {
   controllerAs: 'uploadProfileCtrl',
 };
 
-function UploadProfileController($log, picService){
+function UploadProfileController($log, profileService){
   $log.debug('UploadProfileController');
 
   this.profile = {};
- ////////
-  this.uploadPic = function() {
-    picService.uploadGalleryPic(this.gallery, this.pic)
+
+  this.UploadProfileController = function() {
+    profileService.uploadProfilePic(this.pic)
     .then( () => {
       this.pic.name = null;
-      this.pic.desc = null;
+      this.pic.bio = null;
       this.pic.file = null;
     });
   };
