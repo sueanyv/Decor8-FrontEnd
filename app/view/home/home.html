@@ -3,6 +3,15 @@
 
   <h2>Decor8 Your Home</h2>
   <create-category></create-category>
+  <div class='category-container'>
+    <ul>
+      <view-category
+        ng-repeat="item in homeCtrl.categories"
+        category="item"
+        ng-click="homeCtrl.currentCategory = item">
+      </view-category>
+    </ul>
+  </div>
   <!-- <ul>
     <post-item ng-repeat="item in homeCtrl.posts"
       post="item">

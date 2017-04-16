@@ -2,12 +2,21 @@
 
 require('./_home.scss');
 
-module.exports = ['$log', '$rootScope', HomeController];
+module.exports = ['$log', '$rootScope', 'categoryService', HomeController];
 
-function HomeController($log, $rootScope){
+function HomeController($log, $rootScope, categoryService){
   $log.debug('Home Controller');
+
+  this.categories = [];
   // this.posts =[];
 
+  this.fetchCategories = function(){
+    categoryService.fetchCategories()
+    .then(categories => {
+      this.categories = categories;
+      this.currentCategory = categories[0];
+    });
+  };
   // this.fetchPosts = function(){
   //   postService.fetchPosts()
   //   .then(posts => {
@@ -16,8 +25,10 @@ function HomeController($log, $rootScope){
   //   });
   // };
   //
-  // // this.fetchPosts();
-  // $rootScope.$on('$locationChangeSuccess', () => {
-  //   this.fetchPosts();
-  // });
+  this.fetchCategories();
+  // this.fetchPosts();
+  $rootScope.$on('$locationChangeSuccess', () => {
+    // this.fetchPosts();
+    this.fetchCategories();
+  });
 }
