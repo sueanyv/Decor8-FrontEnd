@@ -1,17 +1,12 @@
-<li class="comment-item">
-  <div class="current-item" ng-if="!commentItemCtrl.showEditComment">
+<li class="viewcomment">
+  <div class="current-item" ng-if="!viewCommentCtrl.showEditComment">
     <div>
-      <span class="item-label">User:</span>
-      <span>{{ commentItemCtrl.comment.name }}</span>
+      <span class="item-label"></span>
+      <span>{{ viewCommentCtrl.comment.desc }}</span>
     </div>
-    <div>
-      <span class="item-label">description:</span>
-      <span>{{ commentItemCtrl.comment.desc }}</span>
-    </div>
-  </div>
 
-  <edit-comment ng-if="commentItemCtrl.showEditComment" comment="commentItemCtrl.comment"></edit-comment>
+  <edit-comment ng-if="viewCommentCtrl.showEditComment" comment="viewCommentCtrl.comment"></edit-comment>
 </li>
 <li class="edit-btns">
-  <span class="btn-std" ng-click="commentItemCtrl.showEditComment = !commentItemCtrl.showEditComment">edit</span>
-  <span class="btn-std del-btn" ng-click="commentItemCtrl.deleteComment()">delete</span>
+  <button class="btn-std" ng-click="viewCommentCtrl.showEditComment = !viewCommentCtrl.showEditComment">edit</button>
+  <button class="btn-std del-btn" ng-click="viewCommentCtrl.deleteComment()">delete</button>

@@ -1,18 +1,20 @@
 @import "../../../scss/lib/theme/vars";
 
-.create-comment{
+
+
+.createcomment{
   margin:20px;
 
-.comment-box{
+}
+.comment-box {
   font-weight: light;
   height: 150px;
   width: 250px;
   border-style:solid;
   border-color:$brand-secondary;
-  border-width:2px 2px;
-  }
+  border-width:3px 3px;
+}
 
   textarea[type=text]:focus {
       background-color: lightblue;
   }
-}

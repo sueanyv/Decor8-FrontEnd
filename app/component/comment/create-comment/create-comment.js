@@ -13,12 +13,12 @@ function CreateCommentController($log, commentService){
 
   this.comment = {};
 
-  this.createComment = function(){
-    $log.debug('createCommentCtrl.createComment');
-    commentService.createComment(this.comment)
+  this.CreateCommentController = function(){
+    console.log(this.comment, 'log comment');
+    commentService.uploadCommentPic(this.comment)
     .then(() => {
-      this.comment.commentType = null;
-      this.comment.desc = null;
+      this.comment.message = null;
+      this.comment.file = null;
     });
   };
 }
