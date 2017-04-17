@@ -1,10 +1,17 @@
-<section class="comment-item">
-  <form action="/html/tags/html_form_tag_action.cfm" method="post">
-<div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-Hey... say something!
-</textarea>
-</div>
-<input type="submit" value="Submit">
-</form>
-</section>
+<li class="comment-item">
+  <div class="current-item" ng-if="!commentItemCtrl.showEditComment">
+    <div>
+      <span class="item-label">User:</span>
+      <span>{{ commentItemCtrl.comment.name }}</span>
+    </div>
+    <div>
+      <span class="item-label">description:</span>
+      <span>{{ commentItemCtrl.comment.desc }}</span>
+    </div>
+  </div>
+
+  <edit-comment ng-if="commentItemCtrl.showEditComment" comment="commentItemCtrl.comment"></edit-comment>
+</li>
+<li class="edit-btns">
+  <span class="btn-std" ng-click="commentItemCtrl.showEditComment = !commentItemCtrl.showEditComment">edit</span>
+  <span class="btn-std del-btn" ng-click="commentItemCtrl.deleteComment()">delete</span>

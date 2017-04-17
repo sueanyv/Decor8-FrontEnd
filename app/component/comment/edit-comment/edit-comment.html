@@ -1,3 +1,19 @@
-<section class="edit-comment">
+<section class="edit">
+  <form class="edit-comment"
+    name="editComment"
+    ng-submit="editCommentCtrl.updateComment()"
+    no-validate>
 
+    <fieldset>
+      <span class="item-label">name:</span>
+      <input name="name" class="input-std" ng-model="editCommentCtrl.comment.name">
+    </fieldset>
+
+    <fieldset>
+      <span class="item-label">description:</span>
+      <input name="desc" class="input-std" ng-model="editCommentCtrl.comment.desc">
+    </fieldset>
+
+    <button class="btn-std">update</button>
+  </form>
 </section>
