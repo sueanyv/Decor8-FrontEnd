@@ -1,0 +1,17 @@
+<section class="create-comment">
+  <h2>Create A Comment</h2>
+  <form name="createCommentForm"
+    class="comment-form"
+    ng-submit="createCommentCtrl.createComment()">
+
+    <fieldset>
+      <input type="text"
+        name="commentType"
+        class="comment-box"
+        placeholder="comment here"
+        ng-model="createCommentCtrl.comment.commentType"
+        required>
+    </fieldset>
+    <button class="btn-std"> Add Comment</button>
+  </form>
+</section>
