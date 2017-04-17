@@ -1,0 +1,32 @@
+<section class="upload-post">
+  <form
+    ng-submit="createPostCtrl.createPost()"
+    novalidate>
+
+    <h3>Create New Post</h3>
+
+    <fieldset>
+      <input class="input-std"
+      name="name" type="text" ng-model="createPostCtrl.post.name" placeholder="Name">
+      <input class="input-std"
+      name="bio" type="text" ng-model="createPostCtrl.post.bio" placeholder="About You">
+    </fieldset>
+
+     <label for="category">Categories</label>
+      <select ng-model="">
+        <option ng-repeat="" value="{{  }}">
+        {{ }}
+        </option>
+      </select>
+
+    <div>
+      <p class="grab-img"
+        ngf-select
+        ng-model="uploadPostCtrl.post.file">
+        Select a post post to upload
+      </p>
+
+      <button class="btn-std">Upload</button>
+    </div>
+  </form>
+</section>
