@@ -23,8 +23,16 @@
   </div>
 
   <create-comment></create-comment>
-  <edit-comment></edit-comment>
-  <comment-item></comment-item>
+  <div class='comment-container'>
+    <ul>
+      <view-comment
+        ng-repeat="item in homeCtrl.comments"
+        category="item"
+        ng-click="homeCtrl.currentComment = item">
+      </view-comment>
+    </ul>
+  </div>
+  
 
   <!-- <ul>
     <post-item ng-repeat="item in homeCtrl.posts"
