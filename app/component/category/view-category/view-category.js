@@ -1,6 +1,6 @@
 'use strict';
 
-require('_view-category.scss');
+require('./_view-category.scss');
 
 module.exports = {
   template: require('./view-category.html'),

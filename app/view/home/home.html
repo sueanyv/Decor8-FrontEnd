@@ -12,6 +12,14 @@
       </view-category>
     </ul>
   </div>
+  <div class='category-checkboxes'>
+    <ul>
+      <category-boxes
+        ng-repeat="stuff in homeCtrl.categories"
+        category="stuff">
+      </category-boxes>
+    </ul>
+  </div>
   <!-- <ul>
     <post-item ng-repeat="item in homeCtrl.posts"
       post="item">
