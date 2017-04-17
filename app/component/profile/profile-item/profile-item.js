@@ -17,6 +17,6 @@ function ProfileItemController($log, profileService) {
   this.showEditProfile = false;
 
   this.deleteProfile = function() {
-    profileService.deleteProfile(this.profile._id);
+    profileService.deleteProfile(this.profile.profileId);
   };
 }

@@ -33,7 +33,7 @@ function profileService($q, $log, $http, Upload, authService) {
   };
 
 
-  service.uploadProfilePic = function(picData) {
+  service.uploadProfilePic = function(profileData) {
     $log.debug('service.uploadProfilePic');
 
     return authService.getToken()
@@ -49,11 +49,15 @@ function profileService($q, $log, $http, Upload, authService) {
         headers,
         method: 'POST',
         data: {
-          name: picData.name,
-          bio: picData.bio,
-          file: picData.file
+          name: profileData.name,
+          bio: profileData.bio,
+          file: profileData.file
         }
       });
+    })
+    .then(res => {
+      service.pic = res.data;
+      return res.data;
     })
     .catch( err => {
       $log.error(err.message);

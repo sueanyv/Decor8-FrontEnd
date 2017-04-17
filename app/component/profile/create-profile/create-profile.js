@@ -13,12 +13,13 @@ function CreateProfileController($log, profileService){
 
   this.profile = {};
 
-  this.CreateProfileController = function() {
-    profileService.uploadProfilePic(this.pic)
+  this.uploadPic = function() {
+    console.log(this.profile, 'logging profile');
+    profileService.uploadProfilePic(this.profile)
     .then( () => {
-      this.pic.name = null;
-      this.pic.bio = null;
-      this.pic.file = null;
+      this.profile.name = null;
+      this.profile.bio = null;
+      this.profile.file = null;
     });
   };
 }

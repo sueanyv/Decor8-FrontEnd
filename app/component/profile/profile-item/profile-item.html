@@ -16,6 +16,8 @@
   <edit-profile ng-if="profileItemCtrl.showEditProfile" profile="profileItemCtrl.profile"></edit-profile>
 </li>
 
+<img ng-src="{{ createProfileCtrl.profile.imageURI }}">
+
 <li class="edit-btns">
   <span class="btn-std" ng-click="profileItemCtrl.showEditProfile = !profileItemCtrl.showEditProfile">edit</span>
   <span class="btn-std del-btn" ng-click="profileItemCtrl.deleteProfile()">delete</span>

@@ -6,5 +6,5 @@ function postService($log, $q, $http, authService){
   $log.debug('postService');
 
   let service = {};
-  let service.posts = [];
+  // let service.posts = []
 }
