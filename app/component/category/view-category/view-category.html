@@ -1,0 +1,22 @@
+<li class="view-category">
+  <div class="current-category" ng-if="!viewCategoryCtrl.showEditCategory">
+    <div>
+      <span class="item-label">categoryType</span>
+      <span>{{viewCategoryCtrl.category.categoryType}}</span>
+    </div>
+    <div>
+      <span class="item-label">category desc</span>
+      <span>{{viewCategoryCtrl.category.desc}}</span>
+    </div>
+  </div>
+
+  <edit-category
+    ng-if="viewCategoryCtrl.showEditCategory"
+    category="viewCategoryCtrl.category">
+  </edit-category>
+  <div class="edit-btns">
+    <button class="btn-std" ng-click="viewCategoryCtrl.showEditCategory = !viewCategoryCtrl.showEditCategory">edit</button>
+    <button class="btn-std" ng-click="viewCategoryCtrl.deleteCategory()"> delete</button>
+  </div>
+
+</li>

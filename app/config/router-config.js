@@ -25,7 +25,7 @@ function routerConfig($stateProvider, $urlRouterProvider){
     },
     {
       name: 'post',
-      url: '/post',
+      url: '/post/:postId',
       template: require('../view/post/post.html'),
       controller: 'PostController',
       controllerAs: 'postCtrl'
