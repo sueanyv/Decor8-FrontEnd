@@ -19,4 +19,4 @@ function ProfileItemController($log, profileService) {
   this.deleteProfile = function() {
     profileService.deleteProfile(this.profile._id);
   };
-};
+}
