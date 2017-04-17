@@ -7,4 +7,8 @@ function postService($log, $q, $http, authService){
 
   let service = {};
   let service.posts = [];
+
+  
+
+  return service;
 }
