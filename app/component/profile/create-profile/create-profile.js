@@ -4,7 +4,7 @@ require('./_create-profile.scss');
 
 module.exports = {
   template: require('./create-profile.html'),
-  controller: ['$log', 'picService', CreateProfileController],
+  controller: ['$log', 'profileService', CreateProfileController],
   controllerAs: 'createProfileCtrl',
 };
 

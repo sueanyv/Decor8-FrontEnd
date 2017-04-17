@@ -7,6 +7,32 @@ function profileService($q, $log, $http, Upload, authService) {
 
   let service = {};
 
+  service.fetchProfile = function(profileId){
+    $log.debug('service.fetchProfile');
+
+    return authService.getToken()
+    .then( token => {
+      let url = `${__API_URL__}/api/profile/${profileId}`;
+      let config = {
+        headers:{
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/json'
+        }
+      };
+      return $http.get(url, config);
+    })
+    .then(res => {
+      $log.log('profile fetched');
+      let profile = res.data;
+      return profile;
+    })
+    .catch(err => {
+      $log.error(err.messge);
+      return $q.reject(err);
+    });
+  };
+
+
   service.uploadProfilePic = function(picData) {
     $log.debug('service.uploadProfilePic');
 

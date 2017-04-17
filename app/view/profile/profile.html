@@ -1,7 +1,16 @@
 <section class="profile">
-
   <h2>This is your profile</h2>
 
   <carousel></carousel>
+
+<div class="create-profile" ng-if="profileCtrl.showCreateProfile">
+  <create-profile></create-profile>
+</div>
+
+<div class="profile-view" ng-if="!profileCtrl.showCreateProfile">
+  <profile-item></profile-item>
+</div>
+
+
 
 </section>
