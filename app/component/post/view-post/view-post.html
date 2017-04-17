@@ -1,0 +1,18 @@
+  <section class="post-page">
+    <div class="post" ng-if="!viewPostCtrl.showEditPost">
+      <img src="{{viewPostCtrl.post.imageURI}}">
+      <h2>{{viewPostCtrl.post.name}}</h2>
+      <p>{{viewPostCtrl.post.desc}}</p>
+      <p>{{viewPostCtrl.post.price}}</p>
+      <p>{{viewPostCtrl.post.created}}</p>
+    </div>
+
+    <edit-post ng-if="viewPostCtrl.showEditPost"
+      post="viewPostCtrl.post">
+    </edit-post>
+    <div class="edit-btns">
+      <button class="btn-std"
+        ng-click="viewPostCtrl.showEditPost = !viewPostCtrl.showEditPost">
+        edit post</button>
+      <button class="btn-std" ng-click="viewPostCtrl.deletePost()">delete post</button>
+  </section>
