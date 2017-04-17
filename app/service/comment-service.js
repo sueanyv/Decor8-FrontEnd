@@ -6,7 +6,7 @@ function commentService($log, $q, $http, authService){
   $log.debug('commentService');
 
   let service = {};
-  service.categories = [];
+  service.comments = [];
 
   service.createComment = function(comment){
     $log.debug('commentService.createComment');
@@ -27,7 +27,7 @@ function commentService($log, $q, $http, authService){
     .then(res => {
       $log.log('comment created');
       let comment = res.data;
-      service.categories.unshift(comment);
+      service.comments.unshift(comment);
       return comment;
     })
     .catch(err => {
