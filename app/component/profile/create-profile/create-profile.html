@@ -1,13 +1,15 @@
 <section class="upload-profile">
   <form
-    ng-submit="uploadProfileCtrl.uploadProfile()"
+    ng-submit="createProfileCtrl.createProfile()"
     novalidate>
 
     <h3>Create New Profile</h3>
 
     <fieldset>
-      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" placeholder="Name">
-      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.bio" placeholder="About You">
+      <input class="input-std"
+      name="name" type="text" ng-model="createProfileCtrl.profile.name" placeholder="Name">
+      <input class="input-std"
+      name="bio" type="text" ng-model="createProfileCtrl.profile.bio" placeholder="About You">
     </fieldset>
 
     <div>
