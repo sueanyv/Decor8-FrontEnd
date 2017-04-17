@@ -1,0 +1,28 @@
+<section class="create-category">
+  <h2>Create A Category</h2>
+  <form name="createCategoryForm"
+    class="category-form"
+    ng-submit="createCategoryCtrl.createCategory()">
+
+    <fieldset>
+      <input type="text"
+        name="categoryType"
+        class="input-std"
+        placeholder="category name"
+        ng-model="createCategoryCtrl.category.categoryType"
+        required>
+    </fieldset>
+
+    <fieldset>
+      <input type="text"
+        name="desc"
+        class="input-std"
+        placeholder="category desc"
+        ng-model="createCategoryCtrl.category.desc"
+        required>
+    </fieldset>
+
+    <button class="btn-std"> create Category</button>
+
+  </form>
+</section>
