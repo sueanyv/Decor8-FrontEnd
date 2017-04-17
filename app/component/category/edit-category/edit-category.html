@@ -1,0 +1,22 @@
+<section class="category-edit">
+  <form name="editCategory"
+    ng-submit="editCategoryCtrl.updateCategory()"
+    novalidate>
+
+    <fieldset>
+      <span class="item-label"> categoryType: </span>
+      <input type="text"
+        name="categoryType"
+        class="input-std"
+        ng-model="editCategoryCtrl.category.categoryType">
+    </fieldset>
+    <fieldset>
+      <span class="item-label"> desc: </span>
+      <input type="text"
+        name="desc"
+        class="input-std"
+        ng-model="editCategoryCtrl.category.desc">
+    </fieldset>
+    <button class="btn-std">update</button>
+  </form>
+</section>

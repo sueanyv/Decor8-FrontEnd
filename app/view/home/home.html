@@ -3,9 +3,29 @@
 
   <h2>Decor8 Your Home</h2>
   <create-category></create-category>
+
+  <div class='category-container'>
+    <ul>
+      <view-category
+        ng-repeat="item in homeCtrl.categories"
+        category="item"
+        ng-click="homeCtrl.currentCategory = item">
+      </view-category>
+    </ul>
+  </div>
+  <div class='category-checkboxes'>
+    <ul>
+      <category-boxes
+        ng-repeat="stuff in homeCtrl.categories"
+        category="stuff">
+      </category-boxes>
+    </ul>
+  </div>
+
   <create-comment></create-comment>
   <edit-comment></edit-comment>
   <comment-item></comment-item>
+
   <!-- <ul>
     <post-item ng-repeat="item in homeCtrl.posts"
       post="item">
