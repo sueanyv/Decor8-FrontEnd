@@ -1,0 +1,19 @@
+<section class="editProfile">
+  <form class="edit-profile"
+    name="editProfile"
+    ng-submit="editProfileCtrl.updateProfile()"
+    no-validate>
+
+    <fieldset>
+      <span class="item-label">name:</span>
+      <input name="name" class="input-std" ng-model="editProfileCtrl.profile.name">
+    </fieldset>
+
+    <fieldset>
+      <span class="item-label">bio:</span>
+      <input name="bio" class="input-std" ng-model="editProfileCtrl.profile.bio">
+    </fieldset>
+
+    <button class="btn-std">Update</button>
+  </form>
+</section>
