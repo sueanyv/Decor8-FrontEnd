@@ -5,7 +5,7 @@ require('./_a-modal.scss');
 module.exports =  {
   restrict: 'EAC',
   template: require('./a-modal.html'),
-  controller: ['$log', '$uibModal', AModalController],
+  controller: ['$log', '$uibModal', aModalController],
   bindToController: true,
   controllerAs: 'aModalCtrl',
   bindings: {
@@ -16,7 +16,7 @@ module.exports =  {
 };
 
 
-function AModalController($log, $uibModal) {
+function aModalController($log, $uibModal) {
   $log.debug('AModalController');
 
   this.openModal = function() {
@@ -30,4 +30,17 @@ function AModalController($log, $uibModal) {
     $log.log('closeModal()') ;
     $uibModal.close();
   };
+}
+
+
+function loggedIn(){
+  if() {
+    console.log('LOGGED IN!');
+
+  } else{
+
+
+
+  }
+});
 }
