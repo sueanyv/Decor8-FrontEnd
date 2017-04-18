@@ -4,11 +4,11 @@ require('./_create-comment.scss');
 
 module.exports = {
   template: require('./create-comment.html'),
-  controller: ['$log', 'commentService', CreateCommentController],
+  controller: ['$log', '$location', 'commentService', CreateCommentController],
   controllerAs: 'createCommentCtrl',
 };
 
-function CreateCommentController($log, commentService){
+function CreateCommentController($log, $location, commentService){
   $log.debug('CreateCommentController');
 
   this.comment = {};
@@ -16,9 +16,10 @@ function CreateCommentController($log, commentService){
   this.CreateCommentController = function(){
     console.log(this.comment, 'log comment');
     commentService.uploadCommentPic(this.comment)
-    .then(() => {
+    .then( res => {
       this.comment.message = null;
       this.comment.file = null;
+      $location.url(`/comment/${res._id}`);
     });
   };
 }
