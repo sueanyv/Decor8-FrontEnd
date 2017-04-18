@@ -8,25 +8,30 @@
     <fieldset>
       <input class="input-std"
       name="name" type="text" ng-model="createPostCtrl.post.name" placeholder="Name">
+    </fieldset>
+    <fieldset>
       <input class="input-std"
-      name="bio" type="text" ng-model="createPostCtrl.post.bio" placeholder="About You">
+      name="desc" type="text" ng-model="createPostCtrl.post.desc" placeholder="Description">
     </fieldset>
 
-     <label for="category">Categories</label>
-      <select ng-model="">
-        <option ng-repeat="" value="{{  }}">
-        {{ }}
-        </option>
-      </select>
+    <fieldset>
+      <input class="input-std"
+      name="price" type="number" ng-model="createPostCtrl.post.price" placeholder="Price">
+    </fieldset>
+
+
+    <label for="category">Categories</label>
+    <select ng-model="createPostCtrl.post.categoryID" >
+      <option ng-repeat="item in createPostCtrl.categories" value="{{item._id}}">{{item.categoryType}}</option>
+    </select>
 
     <div>
       <p class="grab-img"
         ngf-select
-        ng-model="uploadPostCtrl.post.file">
+        ng-model="createPostCtrl.post.image">
         Select a post post to upload
       </p>
-
-      <button class="btn-std">Upload</button>
     </div>
+    <button class="btn-std">Upload</button>
   </form>
 </section>
