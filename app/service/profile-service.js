@@ -78,27 +78,17 @@ function profileService($q, $log, $http, Upload, authService) {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
         }
-      }
+      };
 
-      return $http.put(url, profileData, config);
-    })
-    .then( res => {
-      for (let i = 0; i < service.profile.length; i++) {
-        let current = service.profiles[i];
-        if (current._id === profileId) {
-          service.profiles[i] = res.data;
-          break;
-        }
-      }
-
-      return res.data;
-    })
-    .catch( err => {
-      $log.error(err.message);
-      return $q.reject(err);
+      return $http.put(`${url}`, profileData, config)
+        .then ( res => {
+          return res;
+        })
+        .catch( err => {
+          $log.error(err.message);
+          return $q.reject(err);
+        });
     });
   };
-
-
   return service;
 }
