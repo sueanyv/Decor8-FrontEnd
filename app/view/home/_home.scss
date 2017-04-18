@@ -1,7 +1,12 @@
+@import "../../scss/lib/theme/vars";
+
 .home{
   margin: 30px;
 }
 
 .twitter{
   float:right;
+  border-style:solid;
+  border-color:$brand-secondary;
+  border-width:3px 3px;
 }
