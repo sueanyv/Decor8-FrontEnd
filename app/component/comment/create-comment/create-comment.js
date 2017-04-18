@@ -4,21 +4,27 @@ require('./_create-comment.scss');
 
 module.exports = {
   template: require('./create-comment.html'),
-  controller: ['$log', 'commentService', CreateCommentController],
+  controller: ['$log', '$location', 'commentService', CreateCommentController],
   controllerAs: 'createCommentCtrl',
+  bindings: {
+    post: '<'
+  }
+
 };
 
-function CreateCommentController($log, commentService){
+function CreateCommentController($log, $location, commentService){
   $log.debug('CreateCommentController');
 
   this.comment = {};
 
   this.createComment = function(){
-    $log.debug('createCommentCtrl.createComment');
-    commentService.createComment(this.comment)
-    .then(() => {
-      this.comment.commentType = null;
-      this.comment.desc = null;
+    console.log(this.comment, 'log comment');
+    console.log(this.post, 'post data');
+    commentService.createComment( this.post, this.comment)
+    .then( res => {
+      this.comment.message = null;
+      this.comment.image = null;
+      $location.url(`post/comment/${res._id}`);
     });
   };
 }
