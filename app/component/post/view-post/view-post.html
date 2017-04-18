@@ -16,4 +16,13 @@
         edit post</button>
       <button class="btn-std" ng-click="viewPostCtrl.deletePost()">delete post</button>
     </div>
+    <create-comment post="postCtrl.post"></create-comment>
+    <div class='comment-container'>
+      <ul>
+        <view-comment
+          ng-repeat="item in homeCtrl.comments"
+          category="item"
+          ng-click="homeCtrl.currentComment = item">
+        </view-comment>
+      </ul>
   </section>

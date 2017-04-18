@@ -8,32 +8,34 @@ function commentService($log, $q, $http, Upload, authService){
   let service = {};
   service.comments = [];
 
-  service.createComment = function(postId, comment){
+  service.createComment = function(postId, commentData){
     $log.debug('commentService.createComment');
 
     return authService.getToken()
-    .then(token => {
-      let url = `${__API_URL__}/api/post/${postId}/comment`; //eslint-disable-line
-      let config = {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
-        }
-      };
+        .then( token => {
+          let url = `${__API_URL__}/api/post/postId/comment`;
+          let headers = {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/json'
+          };
 
-      return $http.post(url, comment, config);
-    })
-    .then(res => {
-      $log.log('comment created');
-      let comment = res.data;
-      service.comments.unshift(comment);
-      return comment;
-    })
-    .catch(err => {
-      $log.error(err.message);
-      return $q.reject(err);
-    });
+          return Upload.upload({
+            url,
+            headers,
+            method: 'POST',
+            data: {
+              message: commentData.message,
+              image: commentData.image
+            }
+          });
+        })
+        .then( res => {
+          return res.data;
+        })
+        .catch( err => {
+          $log.error(err.message);
+          return $q.reject(err);
+        });
   };
 
   service.fetchComments = function(){
@@ -139,31 +141,5 @@ function commentService($log, $q, $http, Upload, authService){
     });
   };
 
-  service.uploadCommentPic = function(commentData) {
-    $log.debug('service.uploadCommentPic');
-
-    return authService.getToken()
-    .then( token => {
-      let url = `${__API_URL__}/api/post/comment`;
-      let headers = {
-        Authorization: `Bearer ${token}`,
-        Accept: 'application/json'
-      };
-
-      return Upload.upload({
-        url,
-        headers,
-        method: 'POST',
-        data: {
-          message: commentData.message,
-          file: commentData.file
-        }
-      });
-    })
-    .catch( err => {
-      $log.error(err.message);
-      return $q.reject(err);
-    });
-  };
   return service;
 }

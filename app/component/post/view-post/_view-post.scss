@@ -1,15 +1,27 @@
 @import "../../../scss/lib/theme/vars";
 
-.post-page{
+.post{
   width:50%;
   height:205px;
+  margin-bottom: 5px;
   margin-top: 30px;
   border-style:solid;
   border-color: $brand-secondary;
-  /* border-width:3px 3px; */
+  border-width:.5px .5px;
+  border-radius: 12px 21px 12px;
+  padding: $gutter/2;
+
+
+  p{
+
+    font-family:$font-secondary;
+    font-weight:lighter;
+  }
 
   h2{
     font-family:$font-secondary;
+    font-size:$gutter;
+
   }
 
   img{

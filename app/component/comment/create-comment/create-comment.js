@@ -6,6 +6,10 @@ module.exports = {
   template: require('./create-comment.html'),
   controller: ['$log', '$location', 'commentService', CreateCommentController],
   controllerAs: 'createCommentCtrl',
+  bindings: {
+    post: '<'
+  }
+
 };
 
 function CreateCommentController($log, $location, commentService){
@@ -15,11 +19,12 @@ function CreateCommentController($log, $location, commentService){
 
   this.createComment = function(){
     console.log(this.comment, 'log comment');
-    commentService.createComment(this.comment)
+    console.log(this.post, 'post data');
+    commentService.createComment( this.post, this.comment)
     .then( res => {
       this.comment.message = null;
-      this.comment.file = null;
-      $location.url(`/comment/${res._id}`);
+      this.comment.image = null;
+      $location.url(`post/comment/${res._id}`);
     });
   };
 }
