@@ -1,0 +1,21 @@
+<section class="post-edit">
+  <form class="editPost" ng-submit="editPostCtrl.updatePost()" novalidate>
+    <fieldset>
+      <span class="item-label"> Name </span>
+      <input type="text" name="name" class="input-std"
+        ng-model = editPostCtrl.post.name>
+    </fieldset>
+    <fieldset>
+      <span class="item-label"> Description </span>
+      <input type="text" name="desc" class="input-std"
+        ng-model = editPostCtrl.post.desc>
+    </fieldset>
+    <fieldset>
+      <span class="item-label"> Price </span>
+      <input type="number" name="price" class="input-std"
+        ng-model = editPostCtrl.post.price>
+    </fieldset>
+
+
+  </form>
+</section>
