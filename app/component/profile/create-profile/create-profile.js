@@ -31,4 +31,3 @@ function CreateProfileController($log, $location, profileService){
 
     });
   };
-}
