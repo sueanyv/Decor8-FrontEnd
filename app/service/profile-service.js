@@ -64,5 +64,41 @@ function profileService($q, $log, $http, Upload, authService) {
       return $q.reject(err);
     });
   };
+
+
+  service.updateProfile = function(profileId, profileData) {
+    $log.debug('profileService.updateProfile()');
+
+    return authService.getToken()
+    .then( token => {
+      let url = `${__API_URL__}/api/profile/${profileId}`;
+      let config = {
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      }
+
+      return $http.put(url, profileData, config);
+    })
+    .then( res => {
+      for (let i = 0; i < service.profile.length; i++) {
+        let current = service.profiles[i];
+        if (current._id === profileId) {
+          service.profiles[i] = res.data;
+          break;
+        }
+      }
+
+      return res.data;
+    })
+    .catch( err => {
+      $log.error(err.message);
+      return $q.reject(err);
+    });
+  };
+
+
   return service;
 }
