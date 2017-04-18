@@ -7,11 +7,21 @@
     <h3>Create New Profile</h3>
 
     <fieldset>
-      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" placeholder="Name">
+    <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" placeholder="Name">
 
-      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.bio" placeholder="About You">
+      <!-- <input class="input-std" type="text" ng-model="createProfileCtrl.profile.bio" placeholder="About You"> -->
 
-    </fieldset>
+    <textarea type="text"
+    rows="10" cols="50"
+    class="about-box"
+    autocorrect="on"
+    autocomplete="on"
+    placeholder="About Yourself"
+    ng-model="createProfileCtrl.profile.bio"
+    required>
+    </textarea>
+
+  </fieldset>
 
     <div>
       <p class="grab-img"
