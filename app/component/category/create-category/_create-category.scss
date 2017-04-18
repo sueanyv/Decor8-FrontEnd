@@ -13,7 +13,7 @@ h2{
 .input-std {
   font-weight: light;
   height: 40px;
-  width: 25%;
+  width: 525px;
   border-style:solid;
   border-color:$brand-secondary;
   border-width:3px 3px;
@@ -23,6 +23,7 @@ h2{
         font-family:$font-secondary;
         font-size: x-large;
         padding: 10px;
+        width: 525px;
         text-transform: capitalize;
         color: $brand-secondary;
         margin: $gutter / 9;

@@ -4,5 +4,15 @@
   </div>
   <div ng-if="!postCtrl.showCreatePost">
     <view-post post="postCtrl.post"></view-post>
+    <create-comment></create-comment>
+    <div class='comment-container'>
+      <ul>
+        <view-comment
+          ng-repeat="item in homeCtrl.comments"
+          category="item"
+          ng-click="homeCtrl.currentComment = item">
+        </view-comment>
+      </ul>
+    </div>
   </div>
 </section>

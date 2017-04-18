@@ -13,9 +13,9 @@ function CreateCommentController($log, $location, commentService){
 
   this.comment = {};
 
-  this.CreateCommentController = function(){
+  this.createComment = function(){
     console.log(this.comment, 'log comment');
-    commentService.uploadCommentPic(this.comment)
+    commentService.createComment(this.comment)
     .then( res => {
       this.comment.message = null;
       this.comment.file = null;

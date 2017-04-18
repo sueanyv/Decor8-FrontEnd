@@ -8,7 +8,7 @@ function commentService($log, $q, $http, Upload, authService){
   let service = {};
   service.comments = [];
 
-  service.createComment = function(comment){
+  service.createComment = function(postId, comment){
     $log.debug('commentService.createComment');
 
     return authService.getToken()
