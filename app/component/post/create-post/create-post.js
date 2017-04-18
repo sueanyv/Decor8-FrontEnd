@@ -28,12 +28,13 @@ function CreatePostController($log, $location, postService, categoryService){
   this.createPost = function() {
     postService.createPost(this.post)
     .then(res => {
+      console.log('res id', res._id);
       this.post.name = null;
       this.post.desc = null;
       this.post.price = null;
       this.post.comment = null;
       this.post.image = null;
-      $location.url(`/post/${res._id}`);
+      $location.url(`/post/${res._id.toString()}`);
     });
   };
 }

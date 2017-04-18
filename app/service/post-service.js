@@ -9,7 +9,7 @@ function postService($log, $q, $http, Upload, authService){
   service.posts = [];
 
   service.createPost = function(postData){
-    $log.debug('commentService.createPost');
+    $log.debug('postService.createPost');
     return authService.getToken()
     .then( token => {
       console.log('post data', postData)
@@ -62,6 +62,34 @@ function postService($log, $q, $http, Upload, authService){
     .catch(err => {
       $log.error(err.message);
       return $q.reject(err);
+    });
+  };
+
+  service.deletePost = function(postId, categoryId){
+    $log.debug('postService.deletePost');
+
+    return authService.getToken()
+    .then(token => {
+      let url = `${__API_URL__}/api/category/${categoryId}/post/${postId}`; //eslint-disable-line
+      let config = {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      };
+      return $http.delete(url, config)
+      .then(() => {
+        for(let i = 0; i < service.posts.length; i++){
+          let current = service.posts[i];
+          if(current._id === postId){
+            service.posts.splice(i, 1);
+            break;
+          }
+        }
+      })
+      .catch(err => {
+        $log.error(err.message);
+        return $q.reject(err);
+      });
     });
   };
   return service;
