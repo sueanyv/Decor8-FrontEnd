@@ -1,8 +1,17 @@
 <section class="navbar">
   <nav>
-    <h2>Decor8</h2>
-    <div ng-hide="navbarCtrl.hideButtons">
-      <button class="btn-nav" ng-click="navbarCtrl.logout()">logout</button>
+    <div class="logo">
+      <h2>Decor8</h2>
     </div>
+      <ul>
+        <li>Category</li>
+        <li>Post</li>
+        <li>About Us</li>
+        <li><div ng-hide="navbarCtrl.hideButtons">
+          <button class="btn-nav" ng-click="navbarCtrl.logout()">logout</button>
+        </div></li>
+      </ul>
+      <img ng-src="../../../assets/livingroom.jpg">
+
   </nav>
 </section>

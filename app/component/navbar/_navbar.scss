@@ -1,6 +1,20 @@
 @import "../../scss/lib/theme/vars";
 
+img{
+  width:100%;
+  height:500px;
+}
+
 .btn-nav{
   float: right;
   margin-right: $gutter / 2;
+}
+
+ul{
+  list-decoration: none;
+  font-family:$font-secondary;
+  li{
+    display:inline-block
+
+  }
 }
