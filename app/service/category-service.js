@@ -84,6 +84,10 @@ function categoryService($log, $q, $http, authService){
           break;
         }
       }
+    })
+    .catch(err => {
+      $log.error(err.message);
+      return $q.reject(err);
     });
   };
 
@@ -109,6 +113,10 @@ function categoryService($log, $q, $http, authService){
           break;
         }
       }
+    })
+    .catch(err => {
+      $log.error(err.message);
+      return $q.reject(err);
     });
   };
 

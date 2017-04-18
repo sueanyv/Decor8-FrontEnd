@@ -4,27 +4,37 @@ require('./_create-post.scss');
 
 module.exports = {
   template: require('./create-post.html'),
-  controller: ['$log', 'postService', CreatePostController],
+  controller: ['$log', '$location', 'postService', 'categoryService', CreatePostController],
   controllerAs: 'createPostCtrl',
-  bindings: {
-    category: '<'
-  }
 };
 
-function CreatePostController($log, postService){
+function CreatePostController($log, $location, postService, categoryService){
   $log.debug('CreatePostController');
 
+  this.categories =[];
   this.post = {};
-  this.categories = [];
 
-  this.CreatePostController = function() {
-    postService.uploadPost(this.post)
-    .then( () => {
+  this.fetchCategories = function(){
+    categoryService.fetchCategories()
+    .then(categories => {
+      this.categories = categories;
+      this.currentCategory = categories[0];
+      console.log('categories', this.categories);
+    });
+  };
+
+  this.fetchCategories();
+
+  this.createPost = function() {
+    postService.createPost(this.post)
+    .then(res => {
+      console.log('res id', res._id);
       this.post.name = null;
       this.post.desc = null;
       this.post.price = null;
       this.post.comment = null;
-      this.post.file = null;
+      this.post.image = null;
+      $location.url(`/post/${res._id.toString()}`);
     });
   };
 }
