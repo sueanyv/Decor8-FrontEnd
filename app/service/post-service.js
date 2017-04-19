@@ -12,7 +12,6 @@ function postService($log, $q, $http, Upload, authService){
     $log.debug('postService.createPost');
     return authService.getToken()
     .then( token => {
-      console.log('post data', postData)
       let url = `${__API_URL__}/api/category/${postData.categoryID}/post`; //eslint-disable-line
       let headers = {
         Authorization: `Bearer ${token}`,
@@ -92,5 +91,28 @@ function postService($log, $q, $http, Upload, authService){
       });
     });
   };
+  
+  service.getPosts = function(){
+    authService.getToken()
+    .then(token => {
+      let url = `${__API_URL__}/api/post`; //eslint-disable-line
+      let config = {
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${token}`
+        }
+      };
+      return $http.get(url, config);
+    })
+    .then(res => {
+      console.log('in fetchposts after the fetch', res)
+      return res.data;
+    })
+    .catch(err => {
+      $log.error(err.message);
+      return $q.reject(err);
+    });
+  };
+
   return service;
 }
