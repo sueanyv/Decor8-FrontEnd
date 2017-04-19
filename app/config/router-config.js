@@ -29,7 +29,7 @@ function routerConfig($stateProvider, $urlRouterProvider){
       url: '/profile',
       template: require('../view/profile/profile.html'),
       controller: 'ProfileController',
-      controllerAs: 'profileCtrl',
+      controllerAs: 'profileCtrl'
     }
   ];
 

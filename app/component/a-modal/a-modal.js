@@ -5,7 +5,7 @@ require('./_a-modal.scss');
 module.exports =  {
   restrict: 'EAC',
   template: require('./a-modal.html'),
-  controller: ['$log', '$uibModal', aModalController],
+  controller: ['$log','$uibModal', aModalController],
   bindToController: true,
   controllerAs: 'aModalCtrl',
   bindings: {
@@ -30,4 +30,8 @@ function aModalController($log, $uibModal) {
     $log.log('closeModal()') ;
     $uibModal.close();
   };
+  if(!localStorage.token){
+    console.log('whatever')
+    this.openModal();
+  }
 }
