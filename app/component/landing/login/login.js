@@ -3,11 +3,15 @@
 require('./_login.scss');
 module.exports = {
   template: require('./login.html'),
-  controller: ['$log', '$location', 'authService', LoginController],
-  controllerAs: 'loginCtrl'
+  controller: ['$log', '$location', 'authService', '$uibModal', LoginController],
+  controllerAs: 'loginCtrl',
+  bindings: {
+    close: '&',
+    dismiss: '&'
+  }
 };
 
-function LoginController($log, $location, authService){
+function LoginController($log, $location, authService, $uibModal){
   $log.debug('loginController');
 
   this.login = function(){
@@ -16,5 +20,10 @@ function LoginController($log, $location, authService){
     .then(() => {
       $location.url('/home');
     });
+  };
+
+  this.closeModal = function() {
+    $log.log('closeModal()');
+    // close the modal here
   };
 }

@@ -21,15 +21,17 @@ function aModalController($log, $uibModal) {
 
   this.openModal = function() {
     $log.log('openModal()');
-    $uibModal.open({
+    this.dialog = $uibModal.open({
+      backdrop  : 'static',
       templateUrl: 'aModalContent.html'
     });
   };
 
   this.closeModal = function() {
     $log.log('closeModal()') ;
-    $uibModal.close();
+    this.dialog.close();
   };
+
   if(!localStorage.token){
     this.openModal();
   }

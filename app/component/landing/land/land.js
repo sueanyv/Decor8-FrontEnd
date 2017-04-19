@@ -4,11 +4,15 @@ require('./_land.scss');
 
 module.exports = {
   template: require('./land.html'),
-  controller: ['$log', landController],
-  controllerAs: 'landCtrl'
+  controller: ['$log', '$uibModal', landController],
+  controllerAs: 'landCtrl',
+  bindings: {
+    close: '&',
+    dismiss: '&'
+  }
 };
 
-function landController($log, $location, authService){ //eslint-disable-line
+function landController($log, $uibModal){ //eslint-disable-line
   $log.debug('landController');
   this.showSignup = true;
 }
