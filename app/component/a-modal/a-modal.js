@@ -3,9 +3,8 @@
 require('./_a-modal.scss');
 
 module.exports =  {
-  restrict: 'EAC',
   template: require('./a-modal.html'),
-  controller: ['$log', '$uibModal', AModalController],
+  controller: ['$log','$uibModal', aModalController],
   bindToController: true,
   controllerAs: 'aModalCtrl',
   bindings: {
@@ -16,18 +15,24 @@ module.exports =  {
 };
 
 
-function AModalController($log, $uibModal) {
-  $log.debug('AModalController');
+function aModalController($log, $uibModal) {
+  $log.debug('aModalController');
 
   this.openModal = function() {
     $log.log('openModal()');
-    $uibModal.open({
+    this.dialog = $uibModal.open({
+      backdrop  : 'static',
       templateUrl: 'aModalContent.html'
     });
   };
 
   this.closeModal = function() {
-    $log.log('closeModal()') ;
-    $uibModal.close();
+    $log.log('closeModal()');
+    console.log('jeffs log');
+    this.dialog.close();
   };
+
+  if(!localStorage.token){
+    this.openModal();
+  }
 }
