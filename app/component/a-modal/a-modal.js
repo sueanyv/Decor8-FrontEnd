@@ -17,7 +17,7 @@ module.exports =  {
 
 
 function aModalController($log, $uibModal) {
-  $log.debug('AModalController');
+  $log.debug('aModalController');
 
   this.openModal = function() {
     $log.log('openModal()');
@@ -30,17 +30,4 @@ function aModalController($log, $uibModal) {
     $log.log('closeModal()') ;
     $uibModal.close();
   };
-}
-
-
-function loggedIn(){
-  if() {
-    console.log('LOGGED IN!');
-
-  } else{
-
-
-
-  }
-});
 }
