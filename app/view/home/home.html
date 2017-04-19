@@ -34,6 +34,14 @@
   <edit-comment></edit-comment>
   <comment-item></comment-item>
 
+
+  <view-post
+      ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase"
+      post="item"
+      delete-done="homeCtrl.postDeleteDone(postData)"
+      ng-click="homeCtrl.currentPost = item"
+      ></view-post>
+
   <!-- <ul>
     <post-item ng-repeat="item in homeCtrl.posts"
       post="item">
