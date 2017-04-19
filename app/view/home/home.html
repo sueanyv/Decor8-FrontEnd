@@ -27,7 +27,10 @@
     <create-category></create-category>
   </div>
   <div class="search-bar">
-  <input type="text" ng-model="homeCtrl.postSearchTerm" placeholder="search">
+  <input type="text" ng-model="homeCtrl.postSearchTerm" uib-tooltip="Find A Post"
+  tooltip-placement="top-left"
+  tooltip-trigger="'mouseenter'"
+  tooltip-enable="!inputModel"placeholder="search post">
   </div>
 
     <ul class="post-list">
