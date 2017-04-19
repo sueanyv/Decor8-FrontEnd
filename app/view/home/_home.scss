@@ -1,7 +1,7 @@
 @import "../../scss/lib/theme/vars";
 
 .home{
-  width: 85%;
+  width: 100%;
 }
 .category-container{
   float:left;
@@ -11,7 +11,9 @@
   view-category{
     float:right;
   }
-
+.cara{
+  width:100%;
+}
 
 .twitter{
   width:75%;

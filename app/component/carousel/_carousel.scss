@@ -1,4 +1,21 @@
 .carouselDesign {
+  width: 100%;
+  max-height: 440px;
+  overflow: hidden;
+  position: absolute;
+  margin-top: -10px;
+
+  .carousel {
+    position: static;
+
+    .carousel-indicators {
+      bottom: 10px;
+
+      li {
+        margin-right: 5px;
+      }
+    }
+  }
 
   .left {
     background-image: none;
@@ -6,5 +23,10 @@
 
   .right {
     background-image: none;
+  }
+  div {
+    img {
+      width: 100%;
+    }
   }
 }
