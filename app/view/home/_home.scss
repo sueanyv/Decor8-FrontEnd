@@ -1,8 +1,39 @@
+@import "../../scss/lib/theme/vars";
+
+.home{
+  width: 85%;
+}
+.category-container{
+  float:left;
+  width:100%;
+}
+
+  view-category{
+    float:right;
+  }
+
+
+.twitter{
+  width:75%;
+  border-style:solid;
+  border-color:$brand-secondary;
+  border-width:3px 3px;
+  overflow: scroll;
+}
 .post-list{
-  li{
+
+    width: 30%;
+    height: 300px;
+    overflow: scroll;
+  ul{
+    height:50%;
+    li{
+      display: inline-block;
+      max-height: 100px;
     img{
       max-height: 100px;
       max-width: 100px;
     }
   }
+}
 }

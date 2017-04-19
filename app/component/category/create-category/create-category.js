@@ -6,6 +6,7 @@ module.exports = {
   template: require('./create-category.html'),
   controller: ['$log', 'categoryService', CreateCategoryController],
   controllerAs: 'createCategoryCtrl',
+  
 };
 
 function CreateCategoryController($log, categoryService){

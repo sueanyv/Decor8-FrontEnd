@@ -16,9 +16,8 @@ function CreateProfileController($log, profileService){
   this.CreateProfileController = function() {
     profileService.uploadProfilePic(this.pic)
     .then( () => {
-      this.pic.name = null;
-      this.pic.bio = null;
-      this.pic.file = null;
+      this.comment.message = null;
+      this.comment.file = null;
     });
   };
 }
