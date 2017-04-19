@@ -13,7 +13,7 @@ function commentService($log, $q, $http, Upload, authService){
 
     return authService.getToken()
         .then( token => {
-          let url = `${__API_URL__}/api/post/postId/comment`;
+          let url = `${__API_URL__}/api/post/${postId._id}/comment`;
           let headers = {
             Authorization: `Bearer ${token}`,
             Accept: 'application/json'

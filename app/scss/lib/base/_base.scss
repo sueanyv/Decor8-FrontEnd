@@ -1,3 +1,5 @@
+@import "../theme/vars";
+
 .input-std {
   font-weight: light;
   height: 40px;
@@ -22,4 +24,16 @@
   p{
     font-size: 20px;
     text-indent: 15px;
+    margin:5px;
   }
+
+  /* .btn-std{
+
+    border-style:solid;
+    border-color: $brand-secondary;
+    border-width:.5px .5px;
+    border-radius: 12px 12px 12px;
+    padding: $gutter/2;
+    font-family: $font-secondary;
+    background-color: rgba(177, 162, 59, 0.76);
+  } */

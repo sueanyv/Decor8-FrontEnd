@@ -15,7 +15,10 @@ module.exports = {
 function CreateCommentController($log, $location, commentService){
   $log.debug('CreateCommentController');
 
+  this.post = [];
   this.comment = {};
+
+
 
   this.createComment = function(){
     console.log(this.comment, 'log comment');
@@ -24,7 +27,7 @@ function CreateCommentController($log, $location, commentService){
     .then( res => {
       this.comment.message = null;
       this.comment.image = null;
-      $location.url(`post/comment/${res._id}`);
+      $location.url(`/comment/${res._id}`);
     });
   };
 }

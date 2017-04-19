@@ -4,19 +4,20 @@ require('./_view-comment.scss');
 
 module.exports = {
   template: require('./view-comment.html'),
-  controller: ['$log', 'commentService', ViewCommentController],
+  controller: ['$log', '$location', 'commentService', ViewCommentController],
   controllerAs: 'viewCommentCtrl',
   bindings: {
-    comment: '<'
+    comment: '<',
+    post:'<'
   }
 };
 
-function ViewCommentController($log, commentService){
+function ViewCommentController($log, $location, commentService){
   $log.debug('ViewCommentController');
 
   this.showEditComment = false;
 
   this.deleteComment = function(){
-    commentService.deleteComment(this.comment._id);
+    commentService.deleteComment(this.post, this.comment );
   };
 }
