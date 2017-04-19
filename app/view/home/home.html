@@ -2,6 +2,14 @@
   <img src="http://placehold.it/768x250">
 
   <h2>Decor8 Your Home</h2>
+
+  <ul class="post-list">
+    <li ng-repeat="item in homeCtrl.posts">
+      <img src="{{item.imageURI}}">
+      <div>{{item.name}}</div>
+    </li>
+
+  </ul>
   <create-category></create-category>
 
   <div class='category-container'>
