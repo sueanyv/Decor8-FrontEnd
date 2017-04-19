@@ -1,18 +1,18 @@
 @import "../../scss/lib/theme/vars";
 
-
 .logo{
   margin-left:30px;
   margin-top:20px;
   float:left;
 
   h2{
-    font-size:$gutter * 2.5;
-    margin-left:80px;
+    font-size: 45px;
+    margin-left: 80px;
   }
 }
 .navbar{
   background-color:$brand-primary;
+
 }
 
 .btn-nav{
