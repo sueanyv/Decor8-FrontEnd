@@ -1,25 +1,34 @@
-<section class="upload-profile">
+<div class="profileStyles">
+  <section class="upload-profile">
   <form
-    ng-submit="createProfileCtrl.createProfile()"
+    ng-submit="createProfileCtrl.uploadPic()"
     novalidate>
 
-    <h3>Create New Profile</h3>
-
-    <fieldset>
-      <input class="input-std"
-      name="name" type="text" ng-model="createProfileCtrl.profile.name" placeholder="Name">
-      <input class="input-std"
-      name="bio" type="text" ng-model="createProfileCtrl.profile.bio" placeholder="About You">
-    </fieldset>
+    <h3>Create Your Profile</h3>
 
     <div>
       <p class="grab-img"
-        ngf-select
-        ng-model="uploadProfileCtrl.pic.file">
-        Select a profile pic to upload
-      </p>
+      ngf-select
+      ng-model="createProfileCtrl.profile.image">
+      Select a profile pic to upload
+    </p>
 
-      <button class="btn-std">Upload</button>
-    </div>
+    <button class="btn-std">Upload</button>
+  </div>
+    <fieldset>
+      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" uib-tooltip="Whats Your Name?"
+      tooltip-placement="bottom"
+      tooltip-trigger="'mouseenter'"
+      tooltip-enable="!inputModel" placeholder="Name">
+
+      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.bio" uib-tooltip="Dont Be Shy, Say More About Yourself:)"
+      tooltip-placement="bottom"
+      tooltip-trigger="'mouseenter'"
+      tooltip-enable="!inputModel" placeholder="About You">
+
+    </fieldset>
+
+
   </form>
 </section>
+<div>

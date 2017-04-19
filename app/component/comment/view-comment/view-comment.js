@@ -19,7 +19,7 @@ function ViewCommentController($log, $location, commentService){
   this.deleteComment = function(){
     commentService.deleteComment(this.comment._id, this.comment.postId)
     .then(() => {
-      
+
     });
   };
 }
