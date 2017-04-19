@@ -13,6 +13,7 @@ function CreateProfileController($log, $location, profileService){
 
   this.profile = {};
 
+
   this.uploadPic = function() {
     profileService.uploadProfilePic(this.profile)
     .then(res => {
@@ -21,6 +22,7 @@ function CreateProfileController($log, $location, profileService){
       this.profile.image = null;
       console.log('res data', res);
       $location.url(`/profile/${res._id}`);
+
     });
   };
 }

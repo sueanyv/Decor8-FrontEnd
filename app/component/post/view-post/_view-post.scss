@@ -1,6 +1,32 @@
+@import "../../../scss/lib/theme/vars";
+
 .post{
+  width:50%;
+  height:230px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  border-style:solid;
+  border-color: $brand-secondary;
+  border-width:.5px .5px;
+  border-radius: 12px 12px 12px;
+  padding: $gutter/2;
+
+
+  p{
+
+    font-family:$font-secondary;
+    font-weight:lighter;
+  }
+
+  h2{
+    font-family:$font-secondary;
+    font-size:$gutter;
+
+  }
+
   img{
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 200px;
+    max-width:200px;
+    float:right;
   }
 }

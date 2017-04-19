@@ -1,7 +1,7 @@
 <section class="home">
-  <img src="http://placehold.it/768x250">
 
   <h2>Decor8 Your Home</h2>
+
 
   <ul class="post-list">
     <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
@@ -12,9 +12,10 @@
     </li>
 
   </ul>
-  <create-category></create-category>
+
 
   <div class='category-container'>
+    <h2>Categories</h2>
     <ul>
       <view-category
         ng-repeat="item in homeCtrl.categories"
@@ -22,8 +23,8 @@
         ng-click="homeCtrl.currentCategory = item">
       </view-category>
     </ul>
-  </div>
 
+  </div>
   <div class='category-checkboxes'>
     <ul>
       <li class="category-box"
@@ -36,7 +37,11 @@
         {{stuff.categoryType}}
       </li>
     </ul>
+    <create-category></create-category>
   </div>
+</div>
+  <section class="twitter"> <a class="twitter-timeline" href="https://twitter.com/TheDecor8App">Tweets by TheDecor8App</a>
+  </section>
 
 
   <create-comment></create-comment>
