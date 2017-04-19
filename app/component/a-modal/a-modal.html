@@ -1,16 +1,20 @@
 <script type ="text/ng-template" id="aModalContent.html">
-  <div class="modalhome">
+  <div class="modalhome" ng-if="!SignUpController.show">
     <div class="livModalPic">
       <img src="/assets/roomdecor.jpg" alt="roomdecor" class="roomdecor">
     </div>
- <div class="form-body">
+    <land modal="aModalCtrl.closeModal"></land>
+
+  </div>
+   </script>
+ <!-- <div class="form-body">
    <form class="form-horizontal" role="form" ng-submit="submitUser()">
      <div class="modal-header">
        <h3 class="modal-title">Sign In</h3>
   </div>
-  <!-- <div class="modal-body">
+  <!<div class="modal-body">
    <div class="form-group"> -->
-  <form
+  <!-- <form
     name="loginForm"
     ng-submit="loginCtrl.login()" novalidate>
     <div
@@ -40,13 +44,12 @@
     <button class="btn-std" ng-click="aModalCtrl.closeModal()">Cancel</button>
     <button class="btn-std">sign in</button>
   </form>
-  <!-- <div class="modal-footer">
+  <! <div class="modal-footer">
        <button class="btn-std" ng-click="cancel()">Cancel</button>
        <button class="btn-std">sign in</button>
   </div> -->
-</form>
-</div>
-</div>
+<!-- </form> -->
+<!-- </div> -->
+<!-- </div>
 
-</script>
-<button class="btn-std" ng-click="aModalCtrl.openModal()">This is the modal</button>
+<! </script> -->

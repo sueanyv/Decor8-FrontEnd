@@ -13,22 +13,21 @@ function NavbarController($log, $location, $rootScope, authService) {
 
   this.checkPath = function() {
     let path = $location.path();
-    if (path === '/join') {
+    console.log('path', path);
+    console.log('url', $location.url());
+    if (path === '/home' && !localStorage.token) {
       this.hideButtons = true;
     }
 
-    if (path !== '/join') {
+    if (path === '/home' && localStorage.token) {
       this.hideButtons = false;
-      authService.getToken()
-      .catch( () => {
-        $location.url('/join#login');
-      });
     }
   };
 
   this.checkPath();
 
   $rootScope.$on('$locationChangeSuccess', () => {
+    console.log('Changthing');
     this.checkPath();
   });
 
