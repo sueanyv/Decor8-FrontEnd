@@ -3,12 +3,12 @@
 <li class="profile-item">
   <div class="current-item" ng-if="!profileItemCtrl.showEditProfile">
     <div>
-      <span class="item-label">name:</span>
+      <span class="item-label">Name:</span>
       <span>{{ profileItemCtrl.profile.name }}</span>
     </div>
 
     <div>
-      <span class="item-label">bio:</span>
+      <span class="item-label">Bio:</span>
       <span>{{ profileItemCtrl.profile.bio }}</span>
     </div>
   </div>
@@ -16,7 +16,9 @@
   <edit-profile ng-if="profileItemCtrl.showEditProfile" profile="profileItemCtrl.profile"></edit-profile>
 </li>
 
+<img src="{{ profileItemCtrl.profile.imageURI }}">
+
+
 <li class="edit-btns">
-  <span class="btn-std" ng-click="profileItemCtrl.showEditProfile = !profileItemCtrl.showEditProfile">edit</span>
-  <span class="btn-std del-btn" ng-click="profileItemCtrl.deleteProfile()">delete</span>
+  <span class="btn-std" ng-click="profileItemCtrl.showEditProfile = !profileItemCtrl.showEditProfile">Edit</span>
 </li>

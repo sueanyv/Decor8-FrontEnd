@@ -1,19 +1,6 @@
 <section class="home">
 
   <h2>Decor8 Your Home</h2>
-
-
-  <ul class="post-list">
-    <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
-      <a href="http://localhost:8080/#!/post/{{item._id}}">
-        <img src="{{item.imageURI}}">
-        <div>{{item.name}}</div>
-      </a>
-    </li>
-
-  </ul>
-
-
   <div class='category-container'>
     <h2>Categories</h2>
     <ul>
@@ -39,8 +26,27 @@
     </ul>
     <create-category></create-category>
   </div>
-</div>
-  
+
+  <div class="search-bar">
+  <input type="text" ng-model="homeCtrl.postSearchTerm" uib-tooltip="Find A Post"
+  tooltip-placement="top-left"
+  tooltip-trigger="'mouseenter'"
+  tooltip-enable="!inputModel"placeholder="search post">
+  </div>
+
+    <ul class="post-list">
+      <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
+        <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase"
+      post="item" >
+        <a href="http://localhost:8080/#!/post/{{item._id}}">
+          <img src="{{item.imageURI}}">
+          <div>{{item.name}}</div>
+        </a>
+      </li>
+
+    </ul>
+
+>>>>>>> master
 
 
 </section>

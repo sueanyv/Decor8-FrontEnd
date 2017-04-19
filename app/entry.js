@@ -10,9 +10,10 @@ const ngTouch = require('angular-touch');
 const ngAnimate = require('angular-animate');
 const ngFileUpload = require('ng-file-upload');
 const uiBootstrap = require('angular-ui-bootstrap');
+const ngRoute = require('angular-route');
 const path = require('path');
 
-const decor8 = angular.module('decor8',[ngTouch, ngAnimate, uiRouter, uiBootstrap, ngFileUpload]);
+const decor8 = angular.module('decor8',[ngTouch, ngRoute, ngAnimate, uiRouter, uiBootstrap, ngFileUpload]);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach(key => {
