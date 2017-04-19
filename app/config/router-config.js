@@ -8,7 +8,6 @@ function routerConfig($stateProvider, $urlRouterProvider){
   $urlRouterProvider.when('/signup', '/join#signup');
   $urlRouterProvider.when('/login', '/join#login');
 
-
   let states = [
     {
       name: 'home',
@@ -33,7 +32,7 @@ function routerConfig($stateProvider, $urlRouterProvider){
     },
     {
       name: 'profile',
-      url: '/profile',
+      url: '/profile/:profileId',
       template: require('../view/profile/profile.html'),
       controller: 'ProfileController',
       controllerAs: 'profileCtrl',
