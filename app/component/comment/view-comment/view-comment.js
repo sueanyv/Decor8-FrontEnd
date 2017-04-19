@@ -7,8 +7,7 @@ module.exports = {
   controller: ['$log', '$location', 'commentService', ViewCommentController],
   controllerAs: 'viewCommentCtrl',
   bindings: {
-    comment: '<',
-    post:'<'
+    comment: '<'
   }
 };
 
@@ -18,6 +17,9 @@ function ViewCommentController($log, $location, commentService){
   this.showEditComment = false;
 
   this.deleteComment = function(){
-    commentService.deleteComment(this.post, this.comment );
+    commentService.deleteComment(this.comment._id, this.comment.postId)
+    .then(() => {
+      
+    });
   };
 }

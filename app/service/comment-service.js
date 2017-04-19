@@ -13,7 +13,7 @@ function commentService($log, $q, $http, Upload, authService){
 
     return authService.getToken()
         .then( token => {
-          let url = `${__API_URL__}/api/post/${postId._id}/comment`;
+          let url = `${__API_URL__}/api/post/${postId._id}/comment`; //eslint-disable-line
           let headers = {
             Authorization: `Bearer ${token}`,
             Accept: 'application/json'
@@ -30,6 +30,9 @@ function commentService($log, $q, $http, Upload, authService){
           });
         })
         .then( res => {
+          $log.log('comment created');
+          console.log(res);
+          service.comments.unshift(res.data);
           return res.data;
         })
         .catch( err => {
@@ -68,7 +71,7 @@ function commentService($log, $q, $http, Upload, authService){
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/${commentId}`; //eslint-disable-line
+      let url = `${__API_URL__}/api/comment/${commentId}`; //eslint-disable-line
       let config = {
         headers: {
           Accept: 'application/json',
@@ -116,12 +119,12 @@ function commentService($log, $q, $http, Upload, authService){
   };
 
 
-  service.deleteComment = function(commentId){
+  service.deleteComment = function(commentId, postId){
     $log.debug('commentService.deleteComment');
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/post/${postId}/${comment}/:id`; //eslint-disable-line
+      let url = `${__API_URL__}/api/post/${postId}/comment/${commentId}`; //eslint-disable-line
       let config = {
         headers: {
           Authorization: `Bearer ${token}`

@@ -3,6 +3,14 @@
   <h2>Decor8 Your Home</h2>
 
 
+  <ul class="post-list">
+    <li ng-repeat="item in homeCtrl.posts">
+      <img src="{{item.imageURI}}">
+      <div>{{item.name}}</div>
+    </li>
+
+  </ul>
+
 
   <div class='category-container'>
     <h2>Categories</h2>

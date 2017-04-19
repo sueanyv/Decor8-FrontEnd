@@ -16,15 +16,7 @@
         <p>Edit Post</p></button>
       <button class="btn-std" ng-click="viewPostCtrl.deletePost()"><p>Delete Post</p></button>
     </div>
-    <view-comment ng-if="viewCommentCtrl.showEditComment" comment="viewCommentCtrl.comment"></view-comment>
-   <view-comment ng-repeat="item in viewCommentCtrl.post.comment" comment="item" ng-click="viewCommentCtrl.showComment = !viewPostCtrl.showEditComment" post="viewPostCtrl.post"></view-comment>
+   <view-comment ng-repeat="item in viewPostCtrl.post.comments" comment="item"></view-comment>
 
     <create-comment post="viewPostCtrl.post"></create-comment>
-    <div class='comment-container'>
-      <ul>
-        <view-comment
-          ng-repeat="item in viewPostCtrl.post.comment"
-          ng-click="viewPostCtrl.comment = item">
-        </view-comment>
-      </ul>
   </section>

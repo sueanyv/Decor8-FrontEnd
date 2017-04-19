@@ -1,7 +1,5 @@
 @import "../../scss/lib/theme/vars";
 
-
-
 .home{
   width: 85%;
 }
@@ -21,4 +19,21 @@
   border-color:$brand-secondary;
   border-width:3px 3px;
   overflow: scroll;
+}
+.post-list{
+
+    width: 30%;
+    height: 300px;
+    overflow: scroll;
+  ul{
+    height:50%;
+    li{
+      display: inline-block;
+      max-height: 100px;
+    img{
+      max-height: 100px;
+      max-width: 100px;
+    }
+  }
+}
 }

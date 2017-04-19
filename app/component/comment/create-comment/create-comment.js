@@ -7,7 +7,8 @@ module.exports = {
   controller: ['$log', '$location', 'commentService', CreateCommentController],
   controllerAs: 'createCommentCtrl',
   bindings: {
-    post: '<'
+    post: '<',
+    comment: '<'
   }
 
 };
@@ -24,10 +25,10 @@ function CreateCommentController($log, $location, commentService){
     console.log(this.comment, 'log comment');
     console.log(this.post, 'post data');
     commentService.createComment( this.post, this.comment)
-    .then( res => {
+    .then(res => {
       this.comment.message = null;
       this.comment.image = null;
-      $location.url(`/comment/${res._id}`);
+      $location.url(`/post/${res.postId}`);
     });
   };
 }
