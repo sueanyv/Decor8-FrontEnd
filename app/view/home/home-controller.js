@@ -9,6 +9,18 @@ function HomeController($log, $rootScope, $http, $q, categoryService, postServic
 
   this.categories = [];
   this.posts =[];
+  this.categorySelect = [];
+
+  this.toggleSelection = function(categoryId){
+    $log.debug('toggleSelection');
+    let index = this.categorySelect.indexOf(categoryId);
+    if(index > -1) {
+      this.categorySelect.splice(index, 1);
+    } else {
+      this.categorySelect.push(categoryId);
+    }
+    console.log('categorySelect', this.categorySelect);
+  };
 
   this.fetchCategories = function(){
     categoryService.fetchCategories()
@@ -17,17 +29,7 @@ function HomeController($log, $rootScope, $http, $q, categoryService, postServic
       this.currentCategory = categories[0];
     });
   };
-  // this.fetchPosts = function(){
-  //   postService.getPosts()
-  //   .then(posts => {
-  //     this.posts = posts;
-  //   })
-  //   .catch(err => {
-  //     console.log('error happened', err);
-  //   });
-  // };
 
-  //using this as simple bug from above wasn't letting me return this from the post service.
   this.fetchPosts = function(){
     return authService.getToken()
     .then(token => {
