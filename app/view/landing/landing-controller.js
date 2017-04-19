@@ -5,5 +5,5 @@ module.exports = ['$log', '$location', '$rootScope', 'authService', LandingContr
 function LandingController($log, $location, authService){ //eslint-disable-line
   $log.debug('LandingController');
   let url = $location.url();
-  this.showSignup = url === '/home' || url === '/home';
+  this.showSignup = url === '#!/join' || url === '#!/signup';
 }

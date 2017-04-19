@@ -31,7 +31,6 @@ function aModalController($log, $uibModal) {
     $uibModal.close();
   };
   if(!localStorage.token){
-    console.log('whatever')
     this.openModal();
   }
 }
