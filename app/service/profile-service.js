@@ -51,7 +51,7 @@ function profileService($q, $log, $http, Upload, authService) {
         data: {
           name: profileData.name,
           bio: profileData.bio,
-          file: profileData.file
+          image: profileData.image
         }
       });
     })
@@ -90,5 +90,6 @@ function profileService($q, $log, $http, Upload, authService) {
         });
     });
   };
+
   return service;
 }

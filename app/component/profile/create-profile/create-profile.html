@@ -4,8 +4,17 @@
     ng-submit="createProfileCtrl.uploadPic()"
     novalidate>
 
-    <h3>Create New Profile</h3>
+    <h3>Create Your Profile</h3>
 
+    <div>
+      <p class="grab-img"
+      ngf-select
+      ng-model="createProfileCtrl.profile.image">
+      Select a profile pic to upload
+    </p>
+
+    <button class="btn-std">Upload</button>
+  </div>
     <fieldset>
       <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" placeholder="Name">
 
@@ -13,15 +22,6 @@
 
     </fieldset>
 
-    <div>
-      <p class="grab-img"
-        ngf-select
-        ng-model="createProfileCtrl.profile.file">
-        Select a profile pic to upload
-      </p>
-
-      <button class="btn-std">Upload</button>
-    </div>
 
   </form>
 </section>
