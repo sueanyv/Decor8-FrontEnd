@@ -4,28 +4,31 @@
     ng-submit="createProfileCtrl.uploadPic()"
     novalidate>
 
-    <h3>Create Your Profile</h3>
+    <h2>Create Your Profile</h2>
 
-    <div>
-      <p class="grab-img"
-      ngf-select
-      ng-model="createProfileCtrl.profile.image">
-      Select a profile pic to upload
-    </p>
-
-    <button class="btn-std">Upload</button>
-  </div>
     <fieldset>
       <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" uib-tooltip="Whats Your Name?"
       tooltip-placement="bottom"
       tooltip-trigger="'mouseenter'"
       tooltip-enable="!inputModel" placeholder="Name">
 
-      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.bio" uib-tooltip="Dont Be Shy, Say More About Yourself:)"
+
+      <textarea type="text"
+      rows="10" cols="50"
+      class="bio-box" ng-model="createProfileCtrl.profile.bio" uib-tooltip="Dont Be Shy, Say More About Yourself:)"
       tooltip-placement="bottom"
       tooltip-trigger="'mouseenter'"
-      tooltip-enable="!inputModel" placeholder="About You">
+      tooltip-enable="!inputModel" placeholder="About You"></textarea>
 
+      <div>
+        <p class="grab-img"
+        ngf-select
+        ng-model="createProfileCtrl.profile.image">
+        Select a profile pic to upload
+      </p>
+
+      <button class="btn-std">Upload</button>
+    </div>
     </fieldset>
 
 

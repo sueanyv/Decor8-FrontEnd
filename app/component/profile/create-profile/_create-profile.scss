@@ -1,7 +1,32 @@
+@import "../../../scss/lib/theme/vars";
+
 .profileStyles{
 
-h3 {
-  color: yellow;
 
+
+h2 {
+  color: $brand-secondary;
+  font-family: $font-primary;
+  font-size: 4vw;
+  margin-top: 40px;
+
+}
+
+p{
+  font-family: $font-secondary;
+  text-indent: 0;
+}
+
+fieldset {
+  margin-top: 20px;
+}
+
+.bio-box {
+  font-weight: light;
+  height: 150px;
+  width: 50%;
+  border-style:solid;
+  border-color:$brand-secondary;
+  border-width:3px 3px;
 }
 }
