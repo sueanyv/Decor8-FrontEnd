@@ -1,0 +1,22 @@
+<section class="landing">
+  <div class="join-container"
+    ng-if="landCtrl.showSignup">
+    <h2>Decor8</h2>
+    <div class="join-inner">
+      <signup></signup>
+      <p ng-click="landCtrl.showSignup=false">already a member?</p>
+
+    </div>
+  </div>
+
+  <div class="join-container"
+       ng-if="!landCtrl.showSignup">
+    <h2>Sign In.</h2>
+    <div class="join-inner">
+      <login modal="landCtrl.modal"></login>
+      <p ng-click="landCtrl.showSignup=true">want to sign up? sign up here.</p>
+
+    </div>
+  </div>
+
+</section>
