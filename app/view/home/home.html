@@ -1,8 +1,10 @@
 <section class="home">
-
+ <section class ="cara">
+  <carousel></carousel>
+  </section>
   <h2>Decor8 Your Home</h2>
   <div class='category-container'>
-    <h2>Categories</h2>
+    <!-- <h2>Categories</h2>
     <ul>
       <view-category
         ng-repeat="item in homeCtrl.categories"
@@ -31,8 +33,8 @@
   tooltip-placement="top-left"
   tooltip-trigger="'mouseenter'"
   tooltip-enable="!inputModel"placeholder="search post">
-  </div>
-
+  </div> -->
+<h2>Items</h2>
     <ul class="post-list">
       <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
         <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase"
