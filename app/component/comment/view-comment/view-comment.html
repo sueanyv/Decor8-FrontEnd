@@ -1,0 +1,18 @@
+<li class="viewcomment">
+  <div class="current-item" ng-if="!viewCommentCtrl.showEditComment">
+    <div>
+      <span class="item-label"></span>
+      <span>{{ viewCommentCtrl.comment.desc }}</span>
+    </div>
+
+  <edit-comment ng-if="viewCommentCtrl.showEditComment" comment="viewCommentCtrl.comment"></edit-comment>
+</li>
+
+<img src="{{ viewCommentCtrl.comment.imageURI }}">
+<edit-comment ng-if="viewCommentCtrl.showEditComment"
+  comment="viewCommentCtrl.comment">
+</edit-comment>
+
+<li class="edit-btns">
+  <button class="btn-std" ng-click="viewCommentCtrl.showEditComment = !viewCommentCtrl.showEditComment">edit</button>
+  <button class="btn-std del-btn" ng-click="viewCommentCtrl.deleteComment()">delete</button>
