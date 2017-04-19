@@ -1,12 +1,6 @@
 @import "../../../scss/lib/theme/vars";
 
 
-h2{
-  font-family:$font-primary;
-  font-size: xx-large;
-  font-weight:bold;
-  margin: $gutter / 3;
-}
 .createcomment{
   margin:$gutter;
 
@@ -19,14 +13,3 @@ h2{
   border-color:$brand-secondary;
   border-width:3px 3px;
 }
-
-  textarea[type=text]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-  &:focus {
-      background-color: $brand-primary;
-    }
-  }

@@ -3,37 +3,85 @@
 .input-std {
   font-weight: light;
   height: 40px;
-  width: 25%;
+  width: 35%;
   border-style:solid;
   border-color:$brand-secondary;
   border-width:3px 3px;
 }
 
-  input[type=text]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-        margin: $gutter / 9;
+input[type=text]{
+  font-family:$font-secondary;
+  font-size: x-large;
+  padding: 10px;
+  text-transform: capitalize;
+  color: $brand-secondary;
+  margin: $gutter / 9;
   &:focus {
-      background-color: $brand-primary;
-    }
+    background-color: $brand-primary;
   }
+}
 
-  p{
-    font-size: 20px;
-    text-indent: 15px;
-    margin:5px;
+input[type=number]{
+  font-family:$font-secondary;
+  font-size: x-large;
+  padding: 10px;
+  width: 525px;
+  text-transform: capitalize;
+  color: $brand-secondary;
+  margin: $gutter / 9;
+  &:focus {
+    background-color: $brand-primary;
   }
+}
 
-  .btn-std{
-    margin: 5px;
-    border-style:solid;
-    border-color: $brand-secondary;
-    border-width:1px 1px;
-    border-radius: 5px 5px 5px;
-    padding: $gutter/5;
-    font-family: $font-secondary;
-    /* background-color: rgba(177, 162, 59, 0.76); */
+textarea[type=text]{
+      font-family:$font-secondary;
+      font-size: x-large;
+      padding: 10px;
+      text-transform: capitalize;
+      color: $brand-secondary;
+&:focus {
+    background-color: $brand-primary;
   }
+}
+
+h1{
+  text-align: center;
+  font-family:$font-primary;
+  font-size: 5vw;
+  font-weight:bold;
+  margin: $gutter / 3;
+  margin-top:$gutter;
+  color: $brand-secondary;
+}
+
+h2{
+  font-family:$font-primary;
+  font-size: 3.5vw;
+  font-weight:bold;
+  margin: $gutter / 3;
+  margin-top:$gutter;
+  color: $brand-secondary;
+}
+
+p{
+  font-family: $font-secondary;
+  font-size: 20px;
+  text-indent: 15px;
+  margin:5px;
+}
+
+
+.btn-std{
+  margin: 5px;
+  border-style:solid;
+  border-color: $brand-secondary;
+  border-width:1px 1px;
+  border-radius: 5px 5px 5px;
+  padding: $gutter/5;
+  font-family: $font-secondary;
+}
+
+fieldset {
+  margin: 2% 0;
+}

@@ -1,48 +1,6 @@
 @import "../../../scss/lib/theme/vars";
 
-
-h2{
-  font-family:$font-primary;
-  font-size: xx-large;
-  font-weight:bold;
-  margin: 10px;
-}
 .category-form{
   margin:$gutter;
 
 }
-.input-std {
-  font-weight: light;
-  height: 40px;
-  width: 525px;
-  border-style:solid;
-  border-color:$brand-secondary;
-  border-width:3px 3px;
-  margin-left:4px;
-}
-
-  input[type=text]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        width: 525px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-        margin: $gutter / 9;
-  &:focus {
-      background-color: $brand-primary;
-    }
-  }
-
-  input[type=number]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        width: 525px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-        margin: $gutter / 9;
-  &:focus {
-      background-color: $brand-primary;
-    }
-  }

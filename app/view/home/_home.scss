@@ -1,25 +1,13 @@
 @import "../../scss/lib/theme/vars";
 
 .home{
-  width: 85%;
+  width: 100%;
 }
 .category-container{
   float:left;
   width:100%;
 }
 
-  view-category{
-    float:right;
-  }
-
-
-.twitter{
-  width:75%;
-  border-style:solid;
-  border-color:$brand-secondary;
-  border-width:3px 3px;
-  overflow: scroll;
-}
 .post-list{
 
     width: 30%;
@@ -36,4 +24,8 @@
     }
   }
 }
+}
+
+.search-bar{
+  margin-right:30%;
 }
