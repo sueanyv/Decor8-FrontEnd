@@ -1,15 +1,7 @@
+
 @import "../../../scss/lib/theme/vars";
 
 .profile-item {
-
-
-
-  img {
-  height: 300px;
-  width: 205px;
-  border: 1px solid black;
-  margin-top: 20px;
-}
 }
 .current-item{
   width:50%;
@@ -17,4 +9,5 @@
   border-style: dotted;
   border-color: $brand-secondary;
   border-width: medium;
+
 }

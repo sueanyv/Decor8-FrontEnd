@@ -1,5 +1,12 @@
 @import "../theme/vars";
 
+button {
+  border: none;
+  border-radius: 3px;
+  background: #fff;
+  padding: 4% 12%;
+}
+
 .input-std {
   font-weight: light;
   height: 40px;
@@ -9,13 +16,14 @@
   border-width:3px 3px;
 }
 
-  input[type=text]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-        margin: $gutter / 9;
+input[type=text]{
+  font-family:$font-secondary;
+  font-size: x-large;
+  padding: 10px;
+  text-transform: capitalize;
+  color: $brand-secondary;
+  margin: $gutter / 9;
+
   &:focus {
       background-color: $brand-primary;
     }
