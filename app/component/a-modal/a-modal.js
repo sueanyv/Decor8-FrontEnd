@@ -3,7 +3,6 @@
 require('./_a-modal.scss');
 
 module.exports =  {
-  restrict: 'EAC',
   template: require('./a-modal.html'),
   controller: ['$log','$uibModal', aModalController],
   bindToController: true,
@@ -28,7 +27,8 @@ function aModalController($log, $uibModal) {
   };
 
   this.closeModal = function() {
-    $log.log('closeModal()') ;
+    $log.log('closeModal()');
+    console.log('jeffs log');
     this.dialog.close();
   };
 

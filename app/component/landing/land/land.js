@@ -8,6 +8,7 @@ module.exports = {
   controllerAs: 'landCtrl',
   bindings: {
     close: '&',
+    modal: '&',
     dismiss: '&'
   }
 };
