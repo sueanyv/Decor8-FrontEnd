@@ -29,10 +29,16 @@
       li{float: left;
         display: inline-block;
         max-height: 100px;
-  .post-list  li a img{
-      height: 50px;
-      width: 100px;
-    }
+  // .post-list  li a img{
+  //     height: 50px;
+  //     width: 100px;
+  //   }
   }
 }
 }
+.post-list  li a img{
+    height: 50px;
+    width: 100px;
+    display: inline-block;
+    float: left;
+  }
