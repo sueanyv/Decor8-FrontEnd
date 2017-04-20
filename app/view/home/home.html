@@ -1,10 +1,11 @@
-<section class="home">
- <section class ="cara">
+
+
+ <!--<section class ="cara">
   <carousel></carousel>
   </section>
   <h1>Decor8 Your Home</h1>
   <div class='category-container'>
-<!--
+
   <h2>Categories</h2>
   <ul>
     <view-category
@@ -42,18 +43,23 @@
 -->
 
 
-  <h2>Decor8 Your Home</h2>
+  <section class="home">
+ <section class ="carouselsec">
+  <carousel></carousel>
+</section>
+  <!-- <h2>Decor8 Your Home</h2> -->
 <h2>Items</h2>
+<section class="picsec">
     <ul class="post-list">
       <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
-      post="item" >
+      post="item" class ="postcont" >
           <a href="http://localhost:8080/#!/post/{{item._id}}">
             <img src="{{item.imageURI}}" class="mainps">
             <div>{{item.name}}</div>
           </a>
         </li>
     </ul>
-
+  </section>
   <a-modal></a-modal>
 
 </section>
