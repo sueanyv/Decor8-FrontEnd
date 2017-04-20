@@ -9,7 +9,8 @@
       <ul>
         <category-boxes
           ng-repeat="stuff in homeCtrl.categories"
-          category="stuff">
+          category="stuff"
+          ng-click="homeCtrl.toggleSelection(stuff._id)">
         </category-boxes>
       </ul>
     </div>
@@ -34,7 +35,7 @@
     <ul class="post-list">
       <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
       post="item" class ="postcont" >
-        <a href="http://localhost:8080/#!/post/{{item._id}}">
+        <a href="https://decor8frontend.herokuapp.com/#!/post/{{item._id}}">
           <img src="{{item.imageURI}}" class="mainps">
           <div>{{item.name}}</div>
         </a>
