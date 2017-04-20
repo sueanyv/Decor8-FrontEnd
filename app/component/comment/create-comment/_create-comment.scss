@@ -2,13 +2,15 @@
 
 
 .createcomment{
-  margin:$gutter;
-
+  float:right;
+  display: inline-flex;
+  margin-left:20px;
 }
 .comment-box {
+
   font-weight: light;
   height: 150px;
-  width: 50%;
+  width: 100%;
   border-style:solid;
   border-color:$brand-secondary;
   border-width:3px 3px;
