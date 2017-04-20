@@ -3,8 +3,9 @@
 
 .createcomment{
   float:right;
-  width:54%;
-  margin-bottom:30px;
+  width:55%;
+  margin-bottom:-4px;
+  margin-top: -43px;
 
   .grab-img{
     width:200px;
@@ -18,9 +19,13 @@
     border-radius:5px 5px 5px 5px;
 
   }
+
+  .btn-std{
+    margin-left:5px;
+  }
 }
 .comment-box {
-  
+
   font-weight: light;
   width: 100%;
   border-style:solid;
