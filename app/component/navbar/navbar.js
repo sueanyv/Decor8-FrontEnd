@@ -13,13 +13,11 @@ function NavbarController($log, $location, $rootScope, authService) {
 
   this.checkPath = function() {
     let path = $location.path();
-    console.log('path', path);
-    console.log('url', $location.url());
-    if (path === '/home' && !localStorage.token) {
+    if (path === '/home' && !localStorage.token) { //eslint-disable-line
       this.hideButtons = true;
     }
 
-    if (path === '/home' && localStorage.token) {
+    if (path === '/home' && localStorage.token) { //eslint-disable-line
       this.hideButtons = false;
     }
   };
@@ -27,7 +25,6 @@ function NavbarController($log, $location, $rootScope, authService) {
   this.checkPath();
 
   $rootScope.$on('$locationChangeSuccess', () => {
-    console.log('Changthing');
     this.checkPath();
   });
 

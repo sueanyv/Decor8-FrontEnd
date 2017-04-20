@@ -21,7 +21,7 @@
     </fieldset>
 
 <div class="category-bottom">
-    <label for="category">Categories</label>
+    <label for="category"><p>Categories</p></label>
     <select ng-model="createPostCtrl.post.categoryID" >
       <option ng-repeat="item in createPostCtrl.categories" value="{{item._id}}">{{item.categoryType}}</option>
     </select>

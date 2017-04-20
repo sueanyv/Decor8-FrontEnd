@@ -4,7 +4,7 @@
   </section>
   <h1>Decor8 Your Home</h1>
   <div class='category-container'>
-<!-- 
+<!--
   <h2>Categories</h2>
   <ul>
     <view-category
@@ -38,16 +38,14 @@
     </div>
 <h2>Post</h2>
 
-=======
- <section class ="caras">
-  <carousel></carousel>
-</section>
-  <h2>Decor8 Your Home</h2> -->
 
+-->
+
+
+  <h2>Decor8 Your Home</h2>
 <h2>Items</h2>
     <ul class="post-list">
-        <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
-        <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase"
+      <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
       post="item" >
           <a href="http://localhost:8080/#!/post/{{item._id}}">
             <img src="{{item.imageURI}}" class="mainps">

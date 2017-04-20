@@ -6,33 +6,43 @@
   float:left;
 
   h2{
-    font-size: 45px;
+    font-size: 50px;
     margin-left: 80px;
+  }
+}
+nav{
+  ul{
+    float: right;
+    list-decoration: none;
+    margin:7px;
+    margin-right:$gutter * 2;
+    margin-top:$gutter + 5;
+    font-family:$font-secondary;
+
+
+    li{
+      float: right;
+      margin-right: $gutter;
+      display:inline-block;
+      font-size:$gutter;
+      font-weight:200;
+      a{
+        text-decoration: none;
+        color: $black;
+        &:hover{
+          color: $black;
+        }
+      }
+      div{
+        .btn-nav{
+          margin-right: $gutter;
+          font-size: $gutter / 3 * 2;
+        }
+      }
+    }
   }
 }
 .navbar{
   background-color:$brand-primary;
 
-}
-
-.btn-nav{
-  float: right;
-  margin-right: $gutter / 2;
-}
-nav{
-ul{
-  float: right;
-  list-decoration: none;
-  margin:7px;
-  margin-right:$gutter * 2;
-  margin-top:$gutter + 5;
-  font-family:$font-secondary;
-
-  li{
-    margin-right:20px;
-    display:inline-block;
-    font-size:$gutter;
-
-  }
-}
 }
