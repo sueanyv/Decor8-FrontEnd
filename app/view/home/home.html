@@ -1,54 +1,18 @@
 <section class="home">
- <section class ="cara">
+ <section class ="caras">
   <carousel></carousel>
-  </section>
+</section>
   <h2>Decor8 Your Home</h2>
-  <div class='category-container'>
-    <!-- <h2>Categories</h2>
-    <ul>
-      <view-category
-        ng-repeat="item in homeCtrl.categories"
-        category="item"
-        ng-click="homeCtrl.currentCategory = item">
-      </view-category>
-    </ul>
 
-  </div>
-  <div class='category-checkboxes'>
-    <ul>
-      <li class="category-box"
-        ng-repeat="stuff in homeCtrl.categories">
-        <input type="checkbox"
-        name="categoryType"
-        value="{{stuff.categoryType}}"
-        ng-checked="homeCtrl.categorySelect.indexOf(stuff.categoryType) > -1"
-        ng-click="homeCtrl.toggleSelection(stuff._id)">
-        {{stuff.categoryType}}
-      </li>
-    </ul>
-    <create-category></create-category>
-  </div>
-  <div class="search-bar">
-  <input type="text" ng-model="homeCtrl.postSearchTerm" uib-tooltip="Find A Post"
-  tooltip-placement="top-left"
-  tooltip-trigger="'mouseenter'"
-  tooltip-enable="!inputModel"placeholder="search post">
-  </div> -->
-<h2>Items</h2>
+  <h2>Items</h2>
     <ul class="post-list">
-      <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
+        <li ng-repeat="item in homeCtrl.posts" | categorySearch: homeCtrl.categorySelect>
         <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase"
       post="item" >
-        <a href="http://localhost:8080/#!/post/{{item._id}}">
-          <img src="{{item.imageURI}}">
-          <div>{{item.name}}</div>
-        </a>
-      </li>
-
+          <a href="http://localhost:8080/#!/post/{{item._id}}">
+            <img src="{{item.imageURI}}" class="mainps">
+            <div>{{item.name}}</div>
+          </a>
+        </li>
     </ul>
-
-
   <a-modal></a-modal>
-
-
-</section>
