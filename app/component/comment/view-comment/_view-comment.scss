@@ -3,7 +3,8 @@
   width:100%;
   .editbtns{
     width:49%;
-    margin-right:25px;
+    margin-top:3px;
+    margin-right:80px;
     display: inline-block;
     float:right;
 
@@ -13,10 +14,11 @@
 .current-item{
   /* padding:$gutter; */
   float:right;
-  margin-right:35px;
+  margin-right:25px;
   margin-bottom: -5px;
-  width:50%;
-  height:225px;
+  width:53.5%;
+  position: relative;
+  height:208px;
   border-style: solid;
   border-color:$brand-primary;
   border-width:15px 3px 3px;
@@ -27,6 +29,7 @@
     float:left;
     font-size: 1.5vw;
     margin-left: 10px;
+    width: 57%;
     color:$brand-secondary;
     padding: 5px;
     text-indent: 0px;

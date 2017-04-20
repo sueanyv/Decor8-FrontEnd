@@ -1,1 +1,12 @@
 @import "../../../scss/lib/theme/vars";
+
+.editcomment{
+  fieldset{
+  margin-left:70px;
+  float:right;
+  width:50%;
+  .input-std{
+    width:80%;
+  }
+}
+}

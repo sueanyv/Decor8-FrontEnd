@@ -3,8 +3,26 @@
 
 .createcomment{
   float:right;
-  width:54%;
-  margin-bottom:30px;
+  width:55%;
+  margin-bottom:-1px;
+  margin-top: -43px;
+
+  .grab-img{
+    width:200px;
+    cursor: arrow;
+    padding:3px;
+    text-indent:10px;
+    margin-bottom:-10px;
+    border-style: solid;
+    border-color:$brand-secondary;
+    border-width: 1px 1px 1px;
+    border-radius:5px 5px 5px 5px;
+
+  }
+
+  .btn-std{
+    margin-left:5px;
+  }
 }
 .comment-box {
 
@@ -24,17 +42,4 @@ fieldset{
     text-align:center;
 
   }
-}
-
-.grab-img{
-  width:200px;
-  cursor: arrow;
-  padding:3px;
-  text-indent:10px;
-  margin-bottom:-10px;
-  border-style: solid;
-  border-color:$brand-secondary;
-  border-width: 1px 1px 1px;
-  border-radius:5px 5px 5px 5px;
-
 }
