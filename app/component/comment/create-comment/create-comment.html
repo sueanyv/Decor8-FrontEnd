@@ -4,13 +4,14 @@
   ng-submit="createCommentCtrl.createComment()">
 
   <fieldset>
-    <h2>Comment</h2>
+    <h2>Show & Tell</h2>
+
     <textarea type="text"
-    rows="10" cols="50"
+    rows="5" cols="50"
     class="comment-box"
     autocorrect="on"
     autocomplete="on"
-    placeholder="Tell Me About What You Found"
+    placeholder="Tell Us About What You Found and Uplaod a Picture of It"
     uib-tooltip="Help find this Item with an informative Comment"
     tooltip-placement="bottom"
     tooltip-trigger="'mouseenter'"
@@ -21,15 +22,11 @@
 
 </fieldset>
 
-
-<div>
   <p class="grab-img"
   ngf-select
   ng-model="createCommentCtrl.comment.image">
   Select a pic to upload
 </p>
-</div>
 <button class="btn-std">Upload</button>
-
 </form>
 </section>

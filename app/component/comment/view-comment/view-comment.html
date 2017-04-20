@@ -1,4 +1,4 @@
-<li class="viewcomment">
+<div class="viewcomment">
   <div class="current-item" ng-if="!viewCommentCtrl.showEditComment">
     <img src="{{viewCommentCtrl.comment.imageURI}}">
     <p>{{viewCommentCtrl.comment.message}}</p>
@@ -7,6 +7,9 @@
   <edit-comment ng-if="viewCommentCtrl.showEditComment"
     comment="viewCommentCtrl.comment"></edit-comment>
 
-  <button class="btn-std" ng-click="viewCommentCtrl.showEditComment = !viewCommentCtrl.showEditComment"><p>Edit Comment</p></button>
-  <button class="btn-std del-btn" ng-click="viewCommentCtrl.deleteComment()"><p>Delete Comment</p></button>
-</li>
+<form class="editbtns">
+  <button class="btn-std" ng-click="viewCommentCtrl.showEditComment = !viewCommentCtrl.showEditComment">Edit Comment</button>
+  <button class="btn-std del-btn" ng-click="viewCommentCtrl.deleteComment()">Delete Comment</button>
+
+</form>
+</div>

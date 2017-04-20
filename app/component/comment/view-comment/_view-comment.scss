@@ -1,7 +1,57 @@
 @import "../../../scss/lib/theme/vars";
-
-li{
 .viewcomment{
-  list-decoration: none;
+  width:100%;
+  .editbtns{
+    width:49%;
+    margin-right:25px;
+    display: inline-block;
+    float:right;
+
+  }
 }
+
+.current-item{
+  /* padding:$gutter; */
+  float:right;
+  margin-right:35px;
+  margin-bottom: -5px;
+  width:50%;
+  height:225px;
+  border-style: solid;
+  border-color:$brand-primary;
+  border-width:15px 3px 3px;
+  border-radius: 5px 5px 5px;
+  overflow: auto;
+
+  p{
+    float:left;
+    font-size: 1.5vw;
+    margin-left: 10px;
+    color:$brand-secondary;
+    padding: 5px;
+    text-indent: 0px;
+  }
+
+
+  img{
+    height:100%;
+    padding:2px;
+    width:40%;
+    float:right;
+
+    &:hover{
+      color: #424242;
+      -webkit-transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+      -ms-transition: all .3s ease-in;
+      -o-transition: all .3s ease-in;
+      transition: all .3s ease-in;
+      opacity: 1;
+      transform: scale(1.15);
+      -ms-transform: scale(1.15); /* IE 9 */
+      -webkit-transform: scale(1.15); /* Safari and Chrome */
+
+    }
+
+  }
 }

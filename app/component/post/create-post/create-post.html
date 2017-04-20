@@ -1,9 +1,10 @@
 <section class="upload-post">
+<h2>Create New Post</h2>
   <form
     ng-submit="createPostCtrl.createPost()"
     novalidate>
 
-    <h2>Create New Post</h2>
+
 
     <fieldset>
       <input class="input-std"
@@ -19,8 +20,8 @@
       name="price" type="number" ng-model="createPostCtrl.post.price" placeholder="Price">
     </fieldset>
 
-
-    <label for="category">Categories</label>
+<div class="category-bottom">
+    <label for="category"><p>Categories</p></label>
     <select ng-model="createPostCtrl.post.categoryID" >
       <option ng-repeat="item in createPostCtrl.categories" value="{{item._id}}">{{item.categoryType}}</option>
     </select>
@@ -29,9 +30,10 @@
       <p class="grab-img"
         ngf-select
         ng-model="createPostCtrl.post.image">
-        Select a post post to upload
+        Select a post to upload
       </p>
     </div>
     <button class="btn-std">Upload</button>
+  </div>
   </form>
 </section>
