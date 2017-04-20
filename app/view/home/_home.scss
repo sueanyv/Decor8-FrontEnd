@@ -2,6 +2,51 @@
 
 .home{
   width: 100%;
+  position: relative;
+  .side-button-tab{
+    width: 5%;
+    background: $brand-tertiary;
+    position: fixed;
+    top: 150px;
+    left: 26px;
+    z-index: 1;
+    padding: 5px;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+
+  .side-search{
+    height: 80%;
+    width: 0%;
+    z-index: 1;
+    top: 10%;
+    left: 0px;
+    background-color: $brand-secondary;
+    overflow-x: hidden;
+    padding-top: 40px;
+    transition: 400ms;
+    position: fixed;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    .side-input{
+      width: 80%
+    }
+
+    .close-button{
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      font-size: $gutter / 2;
+
+
+    }
+  }
 }
 .category-container{
   float:left;

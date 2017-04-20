@@ -1,17 +1,45 @@
 <section class="home">
- <section class ="caras">
-  <carousel></carousel>
-</section>
+  <div class="side-button-tab" ng-click="homeCtrl.openSideSearch()">Search</div>
+  <div class="side-search" ng-style="{width: homeCtrl.searchWidth}">
+    <div class="close-button" ng-click="homeCtrl.closeSideSearch()">Close</div>
+    <h2>Search Bar</h2>
+    <input type="text" class="input-std side-input" placeholder="Search By Post Name" ng-model="homeCtrl.postSearchTerm">
+    <h2>Category Search</h2>
+    <div class='category-checkboxes'>
+      <ul>
+        <category-boxes
+          ng-repeat="stuff in homeCtrl.categories"
+          category="stuff">
+        </category-boxes>
+      </ul>
+    </div>
+    <create-category></create-category>
+    <!-- Deciding to not show this to users for production but want to leave this code here for use in editing categories -->
+    <!-- <div class='category-container'>
+      <ul>
+        <view-category
+          ng-repeat="item in homeCtrl.categories"
+          category="item"
+          ng-click="homeCtrl.currentCategory = item">
+        </view-category>
+      </ul>
+    </div> -->
+  </div>
+  <section class ="caras">
+    <carousel></carousel>
+  </section>
   <h2>Decor8 Your Home</h2>
-<h2>Items</h2>
+  <h2>Items</h2>
 
-    <ul class="post-list">
-      <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
-      post="item" >
-          <a href="http://localhost:8080/#!/post/{{item._id}}">
-            <img src="{{item.imageURI}}" class="mainps">
-            <div>{{item.name}}</div>
-          </a>
-        </li>
-    </ul>
+  <ul class="post-list">
+    <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
+    post="item" >
+        <a href="http://localhost:8080/#!/post/{{item._id}}">
+          <img src="{{item.imageURI}}" class="mainps">
+          <div>{{item.name}}</div>
+        </a>
+      </li>
+  </ul>
+
   <a-modal></a-modal>
+</section>

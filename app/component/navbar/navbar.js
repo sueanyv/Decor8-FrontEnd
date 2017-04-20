@@ -36,4 +36,8 @@ function NavbarController($log, $location, $rootScope, authService) {
       $location.url('/');
     });
   };
+
+  this.changeLocation = function(path){
+    $location.url(path);
+  };
 }
