@@ -23,6 +23,16 @@
   .btn-std{
     margin-left:5px;
   }
+
+  fieldset{
+    margin-right:20px;
+
+    h2{
+      font-size: 5.5vw;
+      text-align:center;
+
+    }
+  }
 }
 .comment-box {
 
@@ -32,14 +42,4 @@
   border-color:$brand-primary;
   border-width:12px 3px 3px 3px;
   border-radius: 5px 5px 5px;
-}
-
-fieldset{
-  margin-right:20px;
-
-  h2{
-    font-size: 5.5vw;
-    text-align:center;
-
-  }
 }

@@ -2,12 +2,14 @@
 
 .profile-item {
   margin-top: 25px;
+
   .current-item{
     overflow: auto;
-    width:44%;
-    margin-left: 27%;
-    height:80%;
-
+    width:500px;
+    height:450px;
+    margin-left: 25%;
+    margin-top: 1px;
+    margin-bottom:20px;
     border-style:solid;
     border-color: $brand-secondary;
     border-width:20px 3px 3px 3px;
@@ -16,39 +18,25 @@
 
     img {
       // height:400px;
-      width: 75%;
-      display: block;
+      width: 65%;
       margin: 0px auto;
+      margin-left:18%;
       image-orientation: from-image;
-      margin-top: 10px;
-      margin-bottom: 20px;
       border: 1px solid $brand-secondary;
     }
   }
 
-  .nbtn-std {
-    display: block;
-    width:6.5%;
-    margin: 5px;
-    margin-top: 10px;
-    border-style: solid;
-    border-color: #085394;
-    border-width: 1px 1px;
-    border-radius: 5px 5px 5px;
-    padding: 6px;
-    margin-left: 27%;
-    font-family: "Oswald", sans-serif;
-    font-size: 2vw;
+  .btn-std {
+  margin-left:25%
 
   }
-
-
-
   h3{
     color: $brand-secondary;
     font-family: $font-secondary;
-    font-size: 2vw;
+    font-size: 2.5vw;
+    margin: 15px;
     margin-left: 4px;
+    font-size: 3vw;
 
   }
 }
