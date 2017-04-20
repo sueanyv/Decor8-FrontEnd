@@ -38,6 +38,10 @@ module.exports = {
         loader: 'html-loader'
       },
       {
+        test: /\.(gif|png|jpe?g|svg|ico)$/i,
+        loader: 'file-loader?hash=sha512&digest=hex&name=[hash].[ext]'
+      },
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       }
