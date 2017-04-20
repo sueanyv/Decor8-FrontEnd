@@ -9,7 +9,7 @@
     display: block;
     margin: auto;
     image-orientation: from-image;
-
+    margin-top: 80px;
 }
 }
 .current-item{
@@ -18,5 +18,18 @@
   border-style: dotted;
   border-color: $brand-secondary;
   border-width: medium;
+  margin-left: 80px;
+
+}
+
+.btn-std {
+  margin: 5px;
+  border-style: solid;
+  border-color: #085394;
+  border-width: 1px 1px;
+  border-radius: 5px 5px 5px;
+  padding: 6px;
+  margin-left: 180px;
+  font-family: "Oswald", sans-serif;
 
 }
