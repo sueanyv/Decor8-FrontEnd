@@ -2,21 +2,16 @@
 
 .profileStyles{
 
-
-
-
-
   h2 {
     color: $brand-secondary;
     font-family: $font-primary;
     font-size: 4vw;
     margin-top: 80px;
     margin-left: 80px;
-
-
+    text-align: left;
   }
 
-  p{
+  p {
     font-family: $font-secondary;
     text-indent: 0;
     margin-left: 12px;
@@ -24,7 +19,6 @@
 
   fieldset {
     margin-left: 100px;
-
   }
 
   .bio-box {
@@ -45,8 +39,8 @@
     border-width:3px 3px;
     margin: 10px;
     float: left;
-
   }
+
   .btn-std{
     margin: 5px;
     margin-left: 12px;
@@ -56,5 +50,5 @@
     border-radius: 5px 5px 5px;
     padding: 6px;
     font-family: "Oswald", sans-serif;
-}
+  }
 }
