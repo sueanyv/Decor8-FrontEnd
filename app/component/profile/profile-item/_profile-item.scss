@@ -3,6 +3,17 @@
 
 .profile-item {
 
+  .btn-std {
+    margin: 5px;
+    border-style: solid;
+    border-color: #085394;
+    border-width: 1px 1px;
+    border-radius: 5px 5px 5px;
+    padding: 6px;
+    margin-left: 365px;
+    font-family: "Oswald", sans-serif;
+
+  }
 
   img {
     height:400px;
@@ -29,17 +40,6 @@
 
 }
 
-.btn-std {
-  margin: 5px;
-  border-style: solid;
-  border-color: #085394;
-  border-width: 1px 1px;
-  border-radius: 5px 5px 5px;
-  padding: 6px;
-  margin-left: 365px;
-  font-family: "Oswald", sans-serif;
-
-}
 
 h3{
   color: $brand-secondary;
@@ -47,4 +47,5 @@ h3{
   font-size: 2vw;
   margin-left: 4px;
 
+}
 }
