@@ -25,7 +25,6 @@ function LoginController($log, $location, authService, $uibModal, $window){
 
   this.closeModal = function() {
     $log.log('closeModal()');
-    console.log('yooooooooo');
     setTimeout(function() {
       $window.location.reload();
     }, 500);
