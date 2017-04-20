@@ -1,5 +1,20 @@
 @import "../theme/vars";
 
+
+html, body {
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  background: #fff;
+  padding: 4% 12%;
+}
+
 .input-std {
   font-weight: light;
   height: 40px;
@@ -16,6 +31,7 @@ input[type=text]{
   text-transform: capitalize;
   color: $brand-secondary;
   margin: $gutter / 9;
+
   &:focus {
     background-color: $brand-primary;
   }
@@ -25,7 +41,7 @@ input[type=number]{
   font-family:$font-secondary;
   font-size: x-large;
   padding: 10px;
-  width: 525px;
+  width: 35%;
   text-transform: capitalize;
   color: $brand-secondary;
   margin: $gutter / 9;
@@ -35,12 +51,12 @@ input[type=number]{
 }
 
 textarea[type=text]{
-      font-family:$font-secondary;
-      font-size: x-large;
-      padding: 10px;
-      text-transform: capitalize;
-      color: $brand-secondary;
-&:focus {
+  font-family:$font-secondary;
+  font-size: x-large;
+  padding: 10px;
+  text-transform: capitalize;
+  color: $brand-secondary;
+  &:focus {
     background-color: $brand-primary;
   }
 }

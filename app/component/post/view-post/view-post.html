@@ -16,7 +16,7 @@
         <p>Edit Post</p></button>
       <button class="btn-std" ng-click="viewPostCtrl.deletePost()"><p>Delete Post</p></button>
     </div>
+      <create-comment post="viewPostCtrl.post"></create-comment>
    <view-comment ng-repeat="item in viewPostCtrl.post.comments" comment="item"></view-comment>
 
-    <create-comment post="viewPostCtrl.post"></create-comment>
   </section>

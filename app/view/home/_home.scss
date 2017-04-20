@@ -8,6 +8,22 @@
   width:100%;
 }
 
+
+  view-category{
+    float:right;
+  }
+.cara{
+  width:100%;
+}
+
+.twitter{
+  width:75%;
+  border-style:solid;
+  border-color:$brand-secondary;
+  border-width:3px 3px;
+  overflow: scroll;
+}
+
 .post-list{
 
     width: 30%;

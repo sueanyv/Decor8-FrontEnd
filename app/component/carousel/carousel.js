@@ -17,15 +17,15 @@ function CarouselController($log){
   this.active = 0;
   this.slides = [
     {
-      image: 'http://placehold.it/350x150',
+      image: 'assets/kitchenwooden.jpg',
       id: currentIndex++
     },
     {
-      image: 'http://placehold.it/350x150',
+      image: 'assets/palmlivingroom.jpg',
       id: currentIndex++
     },
     {
-      image: 'http://placehold.it/350x150',
+      image: 'assets/living-chan.jpg',
       id: currentIndex++
     }
   ];
