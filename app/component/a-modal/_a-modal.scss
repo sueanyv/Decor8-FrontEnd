@@ -1,22 +1,54 @@
-.modalhome {
-    height:100%;
-    width:100%;
-    clear:both;
 
-
-.roomdecor {
-    width:50%;
-    float:left;
+.modal-content{
+  height: 350px;
+  background-color:#fff;
+  div{
+   margin-top: -5%;
+   height: 100%;
+   div{
+     margin-top: 5%;
+    float: left;
+    width: 50%;
+      img {
+       width: 100%;
+       float:left;
+       height:100%
+      }
+    }
+  }
 }
 
+
+
+
+.landmod{
+  float: right;
+width: 50%;
+margin-top: 5%;
+height: 100%;
+  .landing{
+    width: 100%;
+height: 100%;
+div{
+  width:100%;
+  margin: 0;
+
+  div{
+    margin: 0;
+
+  }
 }
-// // .form-body{
-// //   margin: 0;
-// //   margin-left: -16px;
-// //   padding: 1.4px;
-// //   border: 0;
-// //   font-size: 100%;
-// //   font: inherit;
-// //   vertical-align: baseline;
-// //  }
+  }
+}
+
+// .landing{
+//   margin-top: -56%;
+//   position: relative;
+//   width: 50%;
+//   float: right;
+// }
+//
+// .signup{
+// input{
+// width: 70%;
 // }
