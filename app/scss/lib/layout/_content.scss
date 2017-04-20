@@ -1,6 +1,8 @@
 main {
   width: 100%;
-  min-height: 805px;
+  overflow: auto;
+  margin-bottom: 180px;
+  min-height:805px;
 }
 
 .navbar {

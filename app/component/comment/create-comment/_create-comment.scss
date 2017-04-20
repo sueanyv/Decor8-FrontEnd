@@ -1,32 +1,40 @@
 @import "../../../scss/lib/theme/vars";
 
 
-h2{
-  font-family:$font-primary;
-  font-size: xx-large;
-  font-weight:bold;
-  margin: $gutter / 3;
-}
 .createcomment{
-  margin:$gutter;
-
+  float:right;
+  width:54%;
+  margin-bottom:30px;
 }
 .comment-box {
+
   font-weight: light;
-  height: 150px;
-  width: 50%;
+  width: 100%;
   border-style:solid;
-  border-color:$brand-secondary;
-  border-width:3px 3px;
+  border-color:$brand-primary;
+  border-width:12px 3px 3px 3px;
+  border-radius: 5px 5px 5px;
 }
 
-  textarea[type=text]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-  &:focus {
-      background-color: $brand-primary;
-    }
+fieldset{
+  margin-right:20px;
+
+  h2{
+    font-size: 5.5vw;
+    text-align:center;
+
   }
+}
+
+.grab-img{
+  width:200px;
+  cursor: arrow;
+  padding:3px;
+  text-indent:10px;
+  margin-bottom:-10px;
+  border-style: solid;
+  border-color:$brand-secondary;
+  border-width: 1px 1px 1px;
+  border-radius:5px 5px 5px 5px;
+
+}
