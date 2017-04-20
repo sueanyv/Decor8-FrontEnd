@@ -1,29 +1,29 @@
 @import "../../../scss/lib/theme/vars";
 
 .profile-item {
-
-  img {
-    height:400px;
-    width: 250px;
-    display: block;
-    margin: 0px auto;
-    image-orientation: from-image;
-    margin-top: 80px;
-    border: 1px solid $brand-secondary;
-  }
+  margin-top: 25px;
   .current-item{
-    border-style: solid;
-    border-color:$brand-primary;
-    border-width:15px 3px 3px;
-    border-radius: 5px 5px 5px;
-    width:50%;
-    height:230px;
+    overflow: auto;
+    width:44%;
+    margin-left: 27%;
+    height:80%;
+
+    border-style:solid;
     border-color: $brand-secondary;
-    border-width: medium;
-    margin: 0px auto;
-    overflow: scroll;
-    word-wrap: break-word;
-    margin-top: 15px;
+    border-width:20px 3px 3px 3px;
+    border-radius: 5px 5px 5px;
+    padding: $gutter/2;
+
+    img {
+      // height:400px;
+      width: 75%;
+      display: block;
+      margin: 0px auto;
+      image-orientation: from-image;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid $brand-secondary;
+    }
   }
 
   .nbtn-std {
@@ -36,7 +36,7 @@
     border-width: 1px 1px;
     border-radius: 5px 5px 5px;
     padding: 6px;
-    margin-left: 25%;
+    margin-left: 27%;
     font-family: "Oswald", sans-serif;
     font-size: 2vw;
 
