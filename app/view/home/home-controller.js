@@ -11,6 +11,7 @@ function HomeController($log, $rootScope, $http, $q, categoryService, postServic
   this.posts =[];
   this.categorySelect = [];
   this.searchWidth = '0%';
+  this.searchMinWidth = '0%';
 
   this.toggleSelection = function(categoryId){
     $log.debug('toggleSelection');
@@ -63,9 +64,11 @@ function HomeController($log, $rootScope, $http, $q, categoryService, postServic
 
   this.openSideSearch = function(){
     this.searchWidth = '30%';
+    this.searchMinWidth = '270px';
   };
 
   this.closeSideSearch = function(){
     this.searchWidth = '0%';
+    this.searchMinWidth = '0%';
   };
 }

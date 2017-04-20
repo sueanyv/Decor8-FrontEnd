@@ -4,16 +4,18 @@
   width: 100%;
   position: relative;
   .side-button-tab{
-    width: 5%;
-    background: $brand-tertiary;
+    font-size: 2em;
+    width: 100px;
+    background: #deb887;
     position: fixed;
     top: 150px;
-    left: 26px;
+    left: 42px;
     z-index: 1;
     padding: 5px;
     transform: rotate(90deg);
     transform-origin: left top 0;
-
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     &:hover{
       cursor: pointer;
     }
@@ -26,7 +28,7 @@
     z-index: 1;
     top: 10%;
     left: 0px;
-    background-color: $brand-secondary;
+    background-color: #819DC0;
     overflow-x: hidden;
     padding-top: 40px;
     transition: 400ms;
@@ -42,7 +44,8 @@
       position: absolute;
       top: 5%;
       right: 10%;
-      font-size: $gutter / 2;
+      font-size: $gutter;
+      font-weight: bold;
 
 
     }

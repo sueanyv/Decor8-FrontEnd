@@ -1,7 +1,7 @@
 <section class="home">
   <div class="side-button-tab" ng-click="homeCtrl.openSideSearch()">Search</div>
-  <div class="side-search" ng-style="{width: homeCtrl.searchWidth}">
-    <div class="close-button" ng-click="homeCtrl.closeSideSearch()">Close</div>
+  <div class="side-search" ng-style="{width: homeCtrl.searchWidth}" ng-style="{min-width: homeCtrl.searchMinWidth}">
+    <div class="close-button" ng-click="homeCtrl.closeSideSearch()">X</div>
     <h2>Search Bar</h2>
     <input type="text" class="input-std side-input" placeholder="Search By Post Name" ng-model="homeCtrl.postSearchTerm">
     <h2>Category Search</h2>
