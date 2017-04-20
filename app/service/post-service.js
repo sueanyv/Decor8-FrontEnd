@@ -91,7 +91,7 @@ function postService($log, $q, $http, Upload, authService){
       });
     });
   };
-  
+
   service.getPosts = function(){
     authService.getToken()
     .then(token => {
