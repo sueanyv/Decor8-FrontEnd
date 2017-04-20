@@ -7,7 +7,7 @@
     <h2>Create Your Profile</h2>
 
     <fieldset>
-      <input class="input-std" type="text" ng-model="createProfileCtrl.profile.name" uib-tooltip="Whats Your Name?"
+      <input class="name-box" type="text" ng-model="createProfileCtrl.profile.name" uib-tooltip="Whats Your Name?"
       tooltip-placement="bottom"
       tooltip-trigger="'mouseenter'"
       tooltip-enable="!inputModel" placeholder="Name">
@@ -20,7 +20,7 @@
       tooltip-trigger="'mouseenter'"
       tooltip-enable="!inputModel" placeholder="About You"></textarea>
 
-      <div>
+      <div class="profile-photo">
         <p class="grab-img"
         ngf-select
         ng-model="createProfileCtrl.profile.image">

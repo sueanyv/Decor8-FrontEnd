@@ -2,6 +2,15 @@
 @import "../../../scss/lib/theme/vars";
 
 .profile-item {
+
+  img {
+    height:400px;
+    width: 250px;
+    display: block;
+    margin: auto;
+    image-orientation: from-image;
+
+}
 }
 .current-item{
   width:50%;
