@@ -1,5 +1,8 @@
 @import "../../../scss/lib/theme/vars";
 
+.upload-post{
+  margin-top: 110px;
+  margin-left: 150px;
 
 h2{
   font-family:$font-primary;
@@ -35,15 +38,5 @@ h2{
     }
   }
 
-  input[type=number]{
-        font-family:$font-secondary;
-        font-size: x-large;
-        padding: 10px;
-        width: 525px;
-        text-transform: capitalize;
-        color: $brand-secondary;
-        margin: $gutter / 9;
-  &:focus {
-      background-color: $brand-primary;
-    }
-  }
+
+}

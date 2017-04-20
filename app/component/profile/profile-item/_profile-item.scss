@@ -1,50 +1,54 @@
-
 @import "../../../scss/lib/theme/vars";
 
 .profile-item {
-
 
   img {
     height:400px;
     width: 250px;
     display: block;
-    margin: auto;
+    margin: 0px auto;
     image-orientation: from-image;
     margin-top: 80px;
     border: 1px solid $brand-secondary;
   }
+  .current-item{
+    border-style: solid;
+    border-color:$brand-primary;
+    border-width:15px 3px 3px;
+    border-radius: 5px 5px 5px;
+    width:50%;
+    height:230px;
+    border-color: $brand-secondary;
+    border-width: medium;
+    margin: 0px auto;
+    overflow: scroll;
+    word-wrap: break-word;
+    margin-top: 15px;
+  }
 
-}
-.current-item{
-  width:50%;
-  height:230px;
-  border-color: $brand-secondary;
-  border-width: medium;
-  margin-left: 363px;
-  overflow: scroll;
-  word-wrap: break-word;
-  margin-top: 15px;
+  .nbtn-std {
+    display: block;
+    width:6.5%;
+    margin: 5px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: #085394;
+    border-width: 1px 1px;
+    border-radius: 5px 5px 5px;
+    padding: 6px;
+    margin-left: 25%;
+    font-family: "Oswald", sans-serif;
+    font-size: 2vw;
+
+  }
 
 
 
-}
+  h3{
+    color: $brand-secondary;
+    font-family: $font-secondary;
+    font-size: 2vw;
+    margin-left: 4px;
 
-.btn-std {
-  margin: 5px;
-  border-style: solid;
-  border-color: #085394;
-  border-width: 1px 1px;
-  border-radius: 5px 5px 5px;
-  padding: 6px;
-  margin-left: 365px;
-  font-family: "Oswald", sans-serif;
-
-}
-
-h3{
-  color: $brand-secondary;
-  font-family: $font-secondary;
-  font-size: 2vw;
-  margin-left: 4px;
-
+  }
 }

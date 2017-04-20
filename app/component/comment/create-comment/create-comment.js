@@ -28,7 +28,7 @@ function CreateCommentController($log, $location, commentService){
     .then(res => {
       this.comment.message = null;
       this.comment.image = null;
-      $location.url(`/post/${res.postId}`);
+      $location.url(`/comment/${res._id.toString()}`);
     });
   };
 }

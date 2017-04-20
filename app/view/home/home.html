@@ -25,21 +25,21 @@
       </ul>
     </div> -->
   </div>
-  <section class ="caras">
+  <section class ="carouselsec">
     <carousel></carousel>
   </section>
-  <h2>Decor8 Your Home</h2>
   <h2>Items</h2>
 
-  <ul class="post-list">
-    <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
-    post="item" >
+  <section class="picsec">
+    <ul class="post-list">
+      <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
+      post="item" class ="postcont" >
         <a href="http://localhost:8080/#!/post/{{item._id}}">
           <img src="{{item.imageURI}}" class="mainps">
           <div>{{item.name}}</div>
         </a>
       </li>
-  </ul>
-
+    </ul>
+  </section>
   <a-modal></a-modal>
 </section>
