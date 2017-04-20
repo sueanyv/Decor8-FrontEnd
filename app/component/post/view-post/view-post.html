@@ -2,9 +2,9 @@
     <div class="post" ng-if="!viewPostCtrl.showEditPost">
       <img src="{{viewPostCtrl.post.imageURI}}">
       <h2>{{viewPostCtrl.post.name}}</h2>
-      <h3>{{viewPostCtrl.post.desc}}</h3>
+      <p>{{viewPostCtrl.post.desc}}</p>
       <p>Willing to Spend ${{viewPostCtrl.post.price}}</p>
-      <p>Date Posted:{{viewPostCtrl.post.created}}</p>
+      <p>Date Posted :{{viewPostCtrl.post.created}}</p>
     </div>
 
     <edit-post ng-if="viewPostCtrl.showEditPost"
