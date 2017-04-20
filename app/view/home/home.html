@@ -1,65 +1,45 @@
-
-
- <!--<section class ="cara">
-  <carousel></carousel>
-  </section>
-  <h1>Decor8 Your Home</h1>
-  <div class='category-container'>
-
-  <h2>Categories</h2>
-  <ul>
-    <view-category
-      ng-repeat="item in homeCtrl.categories"
-      category="item"
-      ng-click="homeCtrl.currentCategory = item">
-    </view-category>
-  </ul>
-
-    </div>
+<section class="home">
+  <div class="side-button-tab" ng-click="homeCtrl.openSideSearch()">Search</div>
+  <div class="side-search" ng-style="{width: homeCtrl.searchWidth}" ng-style="{min-width: homeCtrl.searchMinWidth}">
+    <div class="close-button" ng-click="homeCtrl.closeSideSearch()">X</div>
+    <h2>Search Bar</h2>
+    <input type="text" class="input-std side-input" placeholder="Search By Post Name" ng-model="homeCtrl.postSearchTerm">
+    <h2>Category Search</h2>
     <div class='category-checkboxes'>
-  <ul>
-    <li class="category-box"
-      ng-repeat="stuff in homeCtrl.categories">
-      <input type="checkbox"
-      name="categoryType"
-      value="{{stuff.categoryType}}"
-      ng-checked="homeCtrl.categorySelect.indexOf(stuff.categoryType) > -1"
-      ng-click="homeCtrl.toggleSelection(stuff._id)">
-      {{stuff.categoryType}}
-    </li>
-  </ul>
-  <create-category></create-category>
+      <ul>
+        <category-boxes
+          ng-repeat="stuff in homeCtrl.categories"
+          category="stuff">
+        </category-boxes>
+      </ul>
     </div>
+    <create-category></create-category>
+    <!-- Deciding to not show this to users for production but want to leave this code here for use in editing categories -->
+    <!-- <div class='category-container'>
+      <ul>
+        <view-category
+          ng-repeat="item in homeCtrl.categories"
+          category="item"
+          ng-click="homeCtrl.currentCategory = item">
+        </view-category>
+      </ul>
+    </div> -->
+  </div>
+  <section class ="carouselsec">
+    <carousel></carousel>
+  </section>
+  <h2>Items</h2>
 
-    <div class="search-bar">
-    <input type="text" ng-model="homeCtrl.postSearchTerm" uib-tooltip="Find A Post"
-    tooltip-placement="top-left"
-    tooltip-trigger="'mouseenter'"
-    tooltip-enable="!inputModel"placeholder="search post">
-    </div>
-<h2>Post</h2>
-
-
--->
-
-
-  <section class="home">
- <section class ="carouselsec">
-  <carousel></carousel>
-</section>
-  <!-- <h2>Decor8 Your Home</h2> -->
-<h2>Items</h2>
-<section class="picsec">
+  <section class="picsec">
     <ul class="post-list">
       <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
       post="item" class ="postcont" >
-          <a href="http://localhost:8080/#!/post/{{item._id}}">
-            <img src="{{item.imageURI}}" class="mainps">
-            <div>{{item.name}}</div>
-          </a>
-        </li>
+        <a href="http://localhost:8080/#!/post/{{item._id}}">
+          <img src="{{item.imageURI}}" class="mainps">
+          <div>{{item.name}}</div>
+        </a>
+      </li>
     </ul>
   </section>
   <a-modal></a-modal>
-
 </section>

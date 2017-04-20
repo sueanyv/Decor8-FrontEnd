@@ -1,11 +1,10 @@
 @import "../../../scss/lib/theme/vars";
 
 .view-category{
-  float: left;
-  margin:$gutter;
   font-size: x-large;
   font-weight:light;
-  float:left;
+  width: 80%;
+  overflow: auto;
 
   .item-label{
     margin: $gutter /6;
