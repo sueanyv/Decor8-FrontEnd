@@ -1,11 +1,10 @@
-<!---profile item here -->
 
 <div class="profile-item">
   <img src="{{ profileItemCtrl.profile.imageURI }}">
   <div class="current-item" ng-if="!profileItemCtrl.showEditProfile">
     <div>
       <span class="item-label"></span>
-      <span><p>{{ profileItemCtrl.profile.name }}</p></span>
+      <span><h2>{{ profileItemCtrl.profile.name }}</h2></span>
     </div>
 
     <div>
@@ -20,4 +19,4 @@
 
 
 
-  <span class="btn-std" ng-click="profileItemCtrl.showEditProfile = !profileItemCtrl.showEditProfile">Edit</span>
+  <span class="btn-std" ng-click="profileItemCtrl.showEditProfile = !profileItemCtrl.showEditProfile">Update</span>

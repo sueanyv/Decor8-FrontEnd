@@ -15,10 +15,14 @@
 .current-item{
   width:50%;
   height:230px;
-  border-style: dotted;
   border-color: $brand-secondary;
   border-width: medium;
-  margin-left: 80px;
+  margin-left: 365px;
+  overflow: scroll;
+  word-wrap: break-word;
+  margin-top: 15px;
+
+
 
 }
 
@@ -31,5 +35,12 @@
   padding: 6px;
   margin-left: 180px;
   font-family: "Oswald", sans-serif;
+
+}
+
+h2{
+  color: $brand-secondary;
+  font-family: $font-secondary;
+  font-size: 2vw;
 
 }
