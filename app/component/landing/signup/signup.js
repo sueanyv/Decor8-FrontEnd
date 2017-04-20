@@ -4,11 +4,11 @@ require('./_signup.scss');
 
 module.exports = {
   template: require('./signup.html'),
-  controller: ['$log', '$location', 'authService', SignUpController],
+  controller: ['$log', '$location', 'authService', '$window', SignUpController],
   controllerAs: 'signupCtrl'
 };
 
-function SignUpController($log, $location, authService){
+function SignUpController($log, $location, authService, $window){
 
   this.signup= function(){
     $log.debug('SignUpController.signup');
@@ -17,5 +17,12 @@ function SignUpController($log, $location, authService){
     .then(() => {
       $location.url('/');
     });
+  };
+
+  this.closeModal = function() {
+    $log.log('closeModal()');
+    setTimeout(function() {
+      $window.location.reload();
+    }, 500);
   };
 }

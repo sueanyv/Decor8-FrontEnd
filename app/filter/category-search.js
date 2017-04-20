@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = function(){
-  console.log('in category search');
   return function(posts, categoryArray){
+    if(!categoryArray.length) return posts;
     return posts.filter(post => {
-      return categoryArray.indexOf(post._id) === -1 ;
+      return categoryArray.indexOf(post.categoryID.toString()) !== -1 ;
     });
   };
 };

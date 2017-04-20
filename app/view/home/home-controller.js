@@ -19,7 +19,7 @@ function HomeController($log, $rootScope, $http, $q, categoryService, postServic
     if(index > -1) {
       this.categorySelect.splice(index, 1);
     } else {
-      this.categorySelect.push(categoryId);
+      this.categorySelect.push(categoryId.toString());
     }
     console.log('categorySelect', this.categorySelect);
   };
