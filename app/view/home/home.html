@@ -34,6 +34,7 @@
   tooltip-trigger="'mouseenter'"
   tooltip-enable="!inputModel"placeholder="search post">
   </div> -->
+
 <h2>Items</h2>
     <ul class="post-list">
       <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
