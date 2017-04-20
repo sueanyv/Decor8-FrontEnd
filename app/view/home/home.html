@@ -1,4 +1,49 @@
-<section class="home">
+
+
+ <!--<section class ="cara">
+  <carousel></carousel>
+  </section>
+  <h1>Decor8 Your Home</h1>
+  <div class='category-container'>
+
+  <h2>Categories</h2>
+  <ul>
+    <view-category
+      ng-repeat="item in homeCtrl.categories"
+      category="item"
+      ng-click="homeCtrl.currentCategory = item">
+    </view-category>
+  </ul>
+
+    </div>
+    <div class='category-checkboxes'>
+  <ul>
+    <li class="category-box"
+      ng-repeat="stuff in homeCtrl.categories">
+      <input type="checkbox"
+      name="categoryType"
+      value="{{stuff.categoryType}}"
+      ng-checked="homeCtrl.categorySelect.indexOf(stuff.categoryType) > -1"
+      ng-click="homeCtrl.toggleSelection(stuff._id)">
+      {{stuff.categoryType}}
+    </li>
+  </ul>
+  <create-category></create-category>
+    </div>
+
+    <div class="search-bar">
+    <input type="text" ng-model="homeCtrl.postSearchTerm" uib-tooltip="Find A Post"
+    tooltip-placement="top-left"
+    tooltip-trigger="'mouseenter'"
+    tooltip-enable="!inputModel"placeholder="search post">
+    </div>
+<h2>Post</h2>
+
+
+-->
+
+
+  <section class="home">
  <section class ="carouselsec">
   <carousel></carousel>
 </section>
@@ -16,3 +61,5 @@
     </ul>
   </section>
   <a-modal></a-modal>
+
+</section>

@@ -2,21 +2,23 @@
     <div class="post" ng-if="!viewPostCtrl.showEditPost">
       <img src="{{viewPostCtrl.post.imageURI}}">
       <h2>{{viewPostCtrl.post.name}}</h2>
-      <p>{{viewPostCtrl.post.desc}}</p>
-      <p>{{viewPostCtrl.post.price}}</p>
-      <p>{{viewPostCtrl.post.created}}</p>
+      <h3>{{viewPostCtrl.post.desc}}</h3>
+      <p>Willing to Spend ${{viewPostCtrl.post.price}}</p>
+      <p>Date Posted:{{viewPostCtrl.post.created}}</p>
     </div>
 
     <edit-post ng-if="viewPostCtrl.showEditPost"
       post="viewPostCtrl.post">
     </edit-post>
+    <create-comment post="viewPostCtrl.post"></create-comment>
+<h2>Comments</h2>
+    <view-comment ng-repeat="item in viewPostCtrl.post.comments" comment="item"></view-comment>
+
     <div class="edit-btns">
       <button class="btn-std"
         ng-click="viewPostCtrl.showEditPost = !viewPostCtrl.showEditPost">
-        <p>Edit Post</p></button>
-      <button class="btn-std" ng-click="viewPostCtrl.deletePost()"><p>Delete Post</p></button>
+        Edit Post</button>
+      <button class="btn-std" ng-click="viewPostCtrl.deletePost()">Delete Post</button>
     </div>
-   <view-comment ng-repeat="item in viewPostCtrl.post.comments" comment="item"></view-comment>
 
-    <create-comment post="viewPostCtrl.post"></create-comment>
   </section>

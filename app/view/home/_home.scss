@@ -5,11 +5,15 @@
   padding: 0;
 }
 
+.home{
+  h2{
+    font-family: $font-primary;
+    font-size: 3vw;
 
+  }
+}
 
 .picsec{
-
-  overflow: scroll;
   height: 900px;
   width: 100%;
   margin: 0 auto;
@@ -29,4 +33,8 @@
 li img:hover {
   -webkit-box-shadow: 1px 1px 15px $brand-primary;
   box-shadow: 1px 1px 7px $brand-primary;
+}
+
+.search-bar{
+  margin-right:30%;
 }
