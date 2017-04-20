@@ -4,7 +4,7 @@
   <div class="current-item" ng-if="!profileItemCtrl.showEditProfile">
     <div>
       <span class="item-label"></span>
-      <span><h2>{{ profileItemCtrl.profile.name }}</h2></span>
+      <span><h3>{{ profileItemCtrl.profile.name }}</h3></span>
     </div>
 
     <div>
@@ -14,9 +14,9 @@
   </div>
 
   <edit-profile ng-if="profileItemCtrl.showEditProfile" profile="profileItemCtrl.profile"></edit-profile>
-</div>
 
 
 
 
   <span class="btn-std" ng-click="profileItemCtrl.showEditProfile = !profileItemCtrl.showEditProfile">Update</span>
+</div>
