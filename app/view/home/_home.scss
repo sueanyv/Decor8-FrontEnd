@@ -1,8 +1,59 @@
 @import "../../scss/lib/theme/vars";
 
-* {
-  margin: 0;
-  padding: 0;
+.home{
+  width: 100%;
+  position: relative;
+  .side-button-tab{
+    font-size: 2em;
+    width: 100px;
+    background: #deb887;
+    position: fixed;
+    top: 150px;
+    left: 42px;
+    z-index: 1;
+    padding: 5px;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+
+  .side-search{
+    height: 80%;
+    width: 0%;
+    z-index: 1;
+    top: 10%;
+    left: 0px;
+    background-color: #819DC0;
+    overflow-x: hidden;
+    padding-top: 40px;
+    transition: 400ms;
+    position: fixed;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    .side-input{
+      width: 80%
+    }
+
+    .close-button{
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      font-size: $gutter;
+      font-weight: bold;
+
+
+    }
+  }
+}
+.category-container{
+  float:left;
+  width:100%;
 }
 
 .home{
