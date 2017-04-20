@@ -17,9 +17,9 @@ function ViewCommentController($log, $location, commentService){
   this.showEditComment = false;
 
   this.deleteComment = function(){
-    commentService.deleteComment(this.comment._id, this.comment.postId)
-    .then(() => {
-
+    commentService.deleteComment(this.post, this.comment)
+    .then( res => {
+      $location.url(`/post/${res._id.toString()}`);
     });
   };
 }
