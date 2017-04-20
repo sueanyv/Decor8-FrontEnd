@@ -5,9 +5,22 @@
   float:right;
   width:54%;
   margin-bottom:30px;
+
+  .grab-img{
+    width:200px;
+    cursor: arrow;
+    padding:3px;
+    text-indent:10px;
+    margin-bottom:-10px;
+    border-style: solid;
+    border-color:$brand-secondary;
+    border-width: 1px 1px 1px;
+    border-radius:5px 5px 5px 5px;
+
+  }
 }
 .comment-box {
-
+  
   font-weight: light;
   width: 100%;
   border-style:solid;
@@ -24,17 +37,4 @@ fieldset{
     text-align:center;
 
   }
-}
-
-.grab-img{
-  width:200px;
-  cursor: arrow;
-  padding:3px;
-  text-indent:10px;
-  margin-bottom:-10px;
-  border-style: solid;
-  border-color:$brand-secondary;
-  border-width: 1px 1px 1px;
-  border-radius:5px 5px 5px 5px;
-
 }
