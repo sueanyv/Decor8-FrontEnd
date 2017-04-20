@@ -17,15 +17,15 @@ function CarouselController($log){
   this.active = 0;
   this.slides = [
     {
-      image: 'assets/kitchenwooden.jpg',
+      image: 'app/assets/kitchenwooden.jpg',
       id: currentIndex++
     },
     {
-      image: 'assets/palmlivingroom.jpg',
+      image: 'app/assets/palmlivingroom.jpg',
       id: currentIndex++
     },
     {
-      image: 'assets/living-chan.jpg',
+      image: 'app/assets/living-chan.jpg',
       id: currentIndex++
     }
   ];
