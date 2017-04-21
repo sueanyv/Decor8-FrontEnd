@@ -1,8 +1,9 @@
 @import "../../../scss/lib/theme/vars";
 
 .editcomment{
+  margin: 0px;
   fieldset{
-  margin-left:70px;
+  /* margin-left:70px; */
   float:right;
   width:50%;
     .input-std{

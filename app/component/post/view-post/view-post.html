@@ -1,4 +1,4 @@
-  <section class="post-page">
+   <section class="post-page">
     <div class="post" ng-if="!viewPostCtrl.showEditPost">
       <img src="{{viewPostCtrl.post.imageURI}}">
       <h2>{{viewPostCtrl.post.name}}</h2>
@@ -11,7 +11,7 @@
       post="viewPostCtrl.post">
     </edit-post>
     <create-comment post="viewPostCtrl.post"></create-comment>
-<h2>Comments</h2>
+    <h2 ng-if="viewPostCtrl.post.comments.length">Comments</h2>
     <view-comment ng-repeat="item in viewPostCtrl.post.comments" comment="item"></view-comment>
 
     <div class="edit-btns">
