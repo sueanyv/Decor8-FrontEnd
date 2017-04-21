@@ -16,13 +16,14 @@
 
     }
     p{
-      display: inline;
       margin-left: 10%;
       color: $brand-primary;
       width: 60%;
-      padding-left: 4%;
       padding-top: 1%;
       padding-bottom: 1%;
+      display: inline-block;
+      font-size: 15px;
+      padding-left: 0px;
     }
   }
 }

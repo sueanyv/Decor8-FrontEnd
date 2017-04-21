@@ -6,9 +6,10 @@
   float:left;
 
   h2{
-    font-size: 89px;
-    margin-top: -9px;
+    font-size: 65px;
+    margin-top: 0px;
     color: black;
+    margin-left: 25%;
   }
 }
 nav{
@@ -35,9 +36,11 @@ nav{
         }
       }
       div{
+        margin-top: -5px;
         .btn-nav{
           margin-right: $gutter;
           font-size: $gutter / 3 * 2;
+          padding: 11% 15%;
         }
       }
     }
@@ -45,5 +48,6 @@ nav{
 }
 .navbar{
   background-color:$brand-primary;
-
+  margin-bottom: 0px;
+  border-radius: 0px;
 }
