@@ -1,4 +1,4 @@
-<div class="profileStyles">
+<div class="profile-styles">
   <section class="upload-profile">
   <form
     ng-submit="createProfileCtrl.uploadPic()"
@@ -7,7 +7,7 @@
     <h2>Create Your Profile</h2>
 
     <fieldset>
-      <input class="name-box" type="text" ng-model="createProfileCtrl.profile.name" uib-tooltip="Whats Your Name?"
+      <input class="input-std" type="text" name="name" ng-model="createProfileCtrl.profile.name" uib-tooltip="Whats Your Name?"
       tooltip-placement="bottom"
       tooltip-trigger="'mouseenter'"
       tooltip-enable="!inputModel" placeholder="Name">
