@@ -1,13 +1,17 @@
 @import "../../../scss/lib/theme/vars";
-.category-form{
-  margin-top: 10px !important;
-  fieldset{
-    input{
-      width: 80%;
-      margin-left: 0px;
+
+.create-category{
+  clear: both;
+  .category-form{
+    margin-top: 10px !important;
+    fieldset{
+      input{
+        width: 80%;
+        margin-left: 10%;
+      }
     }
-  }
-  button{
-    margin-left: 0px;
+    button{
+      margin-left: 10%;
+    }
   }
 }
