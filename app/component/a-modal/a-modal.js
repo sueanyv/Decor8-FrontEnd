@@ -32,7 +32,7 @@ function aModalController($log, $uibModal) {
     this.dialog.close();
   };
 
-  if(!localStorage.token){
+  if(!localStorage.token){ //eslint-disable-line
     this.openModal();
   }
 }
