@@ -1,24 +1,30 @@
 @import "../../../scss/lib/theme/vars";
 
-.profileStyles{
-
-  h2 {
-    color: $brand-secondary;
-    font-family: $font-primary;
-    font-size: 4vw;
-    margin-top: 80px;
+.profile-styles{
+  margin-left: -45px;
+  margin-top: 156px;
+.upload-profile{
+    // margin-top: 162px;
     margin-left: 80px;
+  h2 {
+    margin-left: 100px;
     text-align: left;
+    margin-bottom: -36px;
   }
 
   p {
     font-family: $font-secondary;
     text-indent: 0;
     margin-left: 12px;
+    cursor: pointer;
+    &:hover {
+      font-style: italic;
+    }
   }
 
   fieldset {
     margin-left: 100px;
+    width:65%;
   }
 
   .bio-box {
@@ -28,17 +34,34 @@
     border-style:solid;
     border-color:$brand-secondary;
     border-width:3px 3px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 5px 5px 5px;
   }
 
-  .name-box {
+  .input-std {
     font-weight: light;
+    height: 40px;
     width: 50%;
     border-style:solid;
     border-color:$brand-secondary;
     border-width:3px 3px;
-    margin: 10px;
-    float: left;
+    margin-left:4px;
+    // float: left;
+    padding-left: 10px;
+  }
+
+  input[type=text]{
+    font-family: "Oswald", sans-serif;
+    font-size: x-large;
+    padding: 1%;
+    text-transform: capitalize;
+    color: rgba(39, 71, 97, 0.92);
+    margin: 30px;
+    margin-left: 5px;
+
+    &:focus {
+      background-color: $brand-primary;
+    }
   }
 
   .btn-std{
@@ -47,8 +70,10 @@
     border-style: solid;
     border-color: #085394;
     border-width: 1px 1px;
+    font-size: 1vw;
     border-radius: 5px 5px 5px;
-    padding: 6px;
+    padding: 1.2% 2.5%;
     font-family: "Oswald", sans-serif;
   }
+}
 }

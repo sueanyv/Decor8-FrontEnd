@@ -5,12 +5,14 @@
     input{
       width: 80%;
       margin-left: 10%;
-      font-weight: light;
       height: 40px;
       border-style:solid;
       border-color:$brand-secondary;
       border-width:3px 3px;
       border-radius: 5px 5px 5px;
+      font-family: arial;
+      font-size: 15px;
+      text-transform: lowercase;
     }
     .password{
       padding-left: 4%;

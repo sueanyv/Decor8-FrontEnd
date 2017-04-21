@@ -1,8 +1,10 @@
 @import "../../../scss/lib/theme/vars";
 
 .category-box{
-  margin:$gutter /2;
-  font-size: x-large;
-  font-weight:light;
-  float:left;
+  padding-left: 50px;
+  margin: $gutter /2;
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
 }

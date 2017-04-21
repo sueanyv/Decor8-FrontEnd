@@ -1,4 +1,9 @@
 @import "../theme/vars";
+
+* {
+  font-family: helvetica;
+}
+
 body {
   min-height: 100%;
   width: 100%;
@@ -13,6 +18,10 @@ button {
   border-radius: 3px;
   background: #fff;
   padding: 4% 12%;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .input-std {
@@ -28,7 +37,7 @@ button {
 input[type=text]{
   font-family:$font-secondary;
   font-size: x-large;
-  padding: 10px;
+  padding: 2% 15%;
   text-transform: capitalize;
   color: $brand-secondary;
   margin: $gutter / 9;
