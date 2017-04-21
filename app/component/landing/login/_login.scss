@@ -1,0 +1,22 @@
+@import "../../../scss/lib/theme/vars";
+
+.login-form{
+  div{
+    input{
+      width: 80%;
+      margin-left: 10%;
+      font-weight: light;
+      height: 40px;
+      border-style:solid;
+      border-color:$brand-secondary;
+      border-width:3px 3px;
+      border-radius: 5px 5px 5px;
+    }
+    .password{
+      padding-left: 4%;
+    }
+  }
+  button{
+    margin-left: 10%;
+  }
+}
