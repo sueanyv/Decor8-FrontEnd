@@ -31,7 +31,6 @@ function commentService($log, $q, $http, Upload, authService){
         })
         .then( res => {
           $log.log('comment created');
-          console.log(res);
           service.comments.unshift(res.data);
           return res.data;
         })

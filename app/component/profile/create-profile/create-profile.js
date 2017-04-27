@@ -20,7 +20,6 @@ function CreateProfileController($log, $location, profileService){
       this.profile.name = null;
       this.profile.bio = null;
       this.profile.image = null;
-      console.log('res data', res);
       $location.url(`/profile/${res._id}`);
 
     });

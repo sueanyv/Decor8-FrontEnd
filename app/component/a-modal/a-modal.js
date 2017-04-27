@@ -28,7 +28,6 @@ function aModalController($log, $uibModal) {
 
   this.closeModal = function() {
     $log.log('closeModal()');
-    console.log('jeffs log');
     this.dialog.close();
   };
 
