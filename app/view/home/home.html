@@ -35,7 +35,7 @@
     <ul class="post-list">
       <li ng-repeat="item in homeCtrl.posts | postSearch: homeCtrl.postSearchTerm | uppercase | categorySearch: homeCtrl.categorySelect"
       post="item" class ="postcont" >
-        <a href="https://decor8frontend.herokuapp.com/#!/post/{{item._id}}">
+        <a href="https://proddeoc8frontend.herokuapp.com/#!/post/{{item._id}}">
           <img src="{{item.imageURI}}" class="mainps">
           <div>{{item.name}}</div>
         </a>

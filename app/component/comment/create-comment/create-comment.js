@@ -19,11 +19,7 @@ function CreateCommentController($log, $location, $window, commentService){
   this.post = [];
   this.comment = {};
 
-
-
   this.createComment = function(){
-    console.log(this.comment, 'log comment');
-    console.log(this.post, 'post data');
     commentService.createComment( this.post, this.comment)
     .then(() => {
       this.comment.message = null;

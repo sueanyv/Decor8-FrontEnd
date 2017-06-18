@@ -105,7 +105,6 @@ function postService($log, $q, $http, Upload, authService){
       return $http.get(url, config);
     })
     .then(res => {
-      console.log('in fetchposts after the fetch', res)
       return res.data;
     })
     .catch(err => {

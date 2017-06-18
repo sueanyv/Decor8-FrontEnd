@@ -21,7 +21,6 @@ function HomeController($log, $rootScope, $http, $q, categoryService, postServic
     } else {
       this.categorySelect.push(categoryId.toString());
     }
-    console.log('categorySelect', this.categorySelect);
   };
 
   this.fetchCategories = function(){

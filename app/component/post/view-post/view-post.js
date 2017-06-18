@@ -16,7 +16,6 @@ function ViewPostController($log, $location, postService){
 
   this.showEditPost = false;
   this.log = function(){
-    console.log(this.post);
   };
   this.deletePost = function(){
     postService.deletePost(this.post._id, this.post.categoryID)
