@@ -4,7 +4,7 @@ require('./_a-modal.scss');
 
 module.exports =  {
   template: require('./a-modal.html'),
-  controller: ['$log','$uibModal', aModalController],
+  controller: ['$log','$uibModal', 'authService', aModalController],
   bindToController: true,
   controllerAs: 'aModalCtrl',
   bindings: {
@@ -15,7 +15,7 @@ module.exports =  {
 };
 
 
-function aModalController($log, $uibModal) {
+function aModalController($log, $uibModal, authService) {
   $log.debug('aModalController');
 
   this.openModal = function() {
@@ -33,5 +33,6 @@ function aModalController($log, $uibModal) {
 
   if(!localStorage.token){ //eslint-disable-line
     this.openModal();
+    authService.signup({baduser: 'wakeup'}); // calling this line to wake up heroku as soon as a random user starts the page if it is asleep. This line is not intended to actually work or do anything besides ping the backend with a request that will fail.
   }
 }
